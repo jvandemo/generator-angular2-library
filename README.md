@@ -14,7 +14,7 @@ The generator:
 
 ## Quick start
 
-First, install [Yeoman](http://yeoman.io) and generator-angular2-library using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io) and generator-angular2-library using [npm](https://www.npmjs.com/) (assuming you already have [node.js](https://nodejs.org/) pre-installed).
 
 ```bash
 $ npm install -g yo
@@ -55,10 +55,6 @@ $ npm run tsc
 ```
 
 to automatically create all `*.js`, `*.js.map` and `*.d.ts` files.
-
-## Getting To Know Yeoman
-
-Yeoman has a heart of gold. He&#39;s a person with feelings and opinions, but he&#39;s very easy to work with. If you think he&#39;s too opinionated, he can be easily convinced. Feel free to [learn more about him](http://yeoman.io/).
 
 ## License
 
