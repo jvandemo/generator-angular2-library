@@ -1,5 +1,5 @@
 # generator-angular2-library
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 [Yeoman](http://yeoman.io) generator to create a standalone [Angular 2](https://angular.io/) library in seconds.
  
@@ -60,6 +60,13 @@ to automatically create all `*.js`, `*.js.map` and `*.d.ts` files.
 
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
+## Change log
+
+### v0.1.0
+
+- Added documentation
+- Added boilerplate scaffolding
+- Initial version
 
 [npm-image]: https://badge.fury.io/js/generator-angular2-library.svg
 [npm-url]: https://npmjs.org/package/generator-angular2-library
