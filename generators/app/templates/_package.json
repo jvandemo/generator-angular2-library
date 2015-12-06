@@ -18,6 +18,7 @@
     "angular",
     "angular2"
   ],
+  "license": "MIT",
   "bugs": {
     "url": "<%= props.gitRepositoryUrl %>/issues"
   },
