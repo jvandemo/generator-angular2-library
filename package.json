@@ -1,6 +1,6 @@
 {
   "name": "generator-angular2-library",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generator to create an Angular 2 library",
   "homepage": "https://github.com/jvandemo/generator-angular2-library",
   "author": {

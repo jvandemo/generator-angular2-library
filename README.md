@@ -123,6 +123,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v0.2.0
+
+- Added documentation
+- Added support for `PROVIDERS`, `DIRECTIVES` and `PIPES`
+
 ### v0.1.0
 
 - Added documentation
