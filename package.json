@@ -15,6 +15,7 @@
   "keywords": [
     "yeoman-generator"
   ],
+  "license": "MIT",
   "dependencies": {
     "yeoman-generator": "^0.21.1",
     "chalk": "^1.0.0",
