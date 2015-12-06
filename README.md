@@ -100,6 +100,11 @@ export class AppComponent{
 
 The Angular team uses a similar approach with `CORE_DIRECTIVES`, `FORM_DIRECTIVES` and `ROUTER_PROVIDERS`.
 
+## To do
+
+- Create build process for building library that automatically registers with SystemJS so it can be hosted statically and imported using `<script>` element
+- Create process for running unit tests
+
 ## Issues
 
 Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
