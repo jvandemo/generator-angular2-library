@@ -125,6 +125,16 @@ module.exports = yeoman.generators.Base.extend({
       );
     },
 
+    copyREADME: function copyREADME() {
+      this.fs.copyTpl(
+        this.templatePath('README.MD'),
+        this.destinationPath('README.MD'),
+        {
+          props: this.props
+        }
+      );
+    },
+
     copyMain: function copyMain() {
       this.fs.copy(
         this.templatePath('main.ts'),
