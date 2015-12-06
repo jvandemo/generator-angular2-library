@@ -10,11 +10,7 @@ The generator:
 - creates and configures `package.json`
 - creates and configures `tsconfig.json`
 - creates the main library file
-- creates a sample directive
-- creates a sample component
-- creates a sample service
-- creates a sample pipe
-
+- creates a sample directive, component, service and pipe
 
 ## Quick start
 
