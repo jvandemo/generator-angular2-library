@@ -1,7 +1,7 @@
 # generator-angular2-library
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
 
-Yeoman generator to create a standalone Angular 2 library in seconds.
+[Yeoman]((http://yeoman.io)) generator to create a standalone [Angular 2](https://angular.io/) library in seconds.
  
 If you want to create an Angular 2 library with directives, services and/or pipes, then this generator is just what you need.
 
