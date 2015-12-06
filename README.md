@@ -74,6 +74,32 @@ $ npm run tsc
 
 to automatically create all `*.js`, `*.js.map` and `*.d.ts` files.
 
+## `PROVIDERS`, `DIRECTIVES` and `PIPES`
+
+The generator automatically prepares boilerplate code to export convenient bundle properties.
+
+As a library author you are free to choose whether you want to do this or not (see [this discussion](https://github.com/angular/angular/issues/5503)).
+
+The benefit is that consumers of your library can easily import bundles of services, directives and pipes:
+
+```javascript
+import { Component } from 'angular2/angular2';
+import { PROVIDERS, DIRECTIVES, PIPES } from 'angular2-library-name/angular2-library-name';
+
+@Component({
+  selector: 'app'
+  providers: [PROVIDERS]
+  directives: [DIRECTIVES],
+  pipes: [PIPES]
+})
+export class AppComponent{
+  // ...
+}
+
+```
+
+The Angular team uses a similar approach with `CORE_DIRECTIVES`, `FORM_DIRECTIVES` and `ROUTER_PROVIDERS`.
+
 ## Issues
 
 Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
