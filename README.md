@@ -9,8 +9,11 @@ The generator:
 
 - creates and configures `package.json`
 - creates and configures `tsconfig.json`
+- creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
 - creates the main library file
 - creates a sample directive, component, service and pipe
+- creates boilerplate code to conveniently export `PROVIDERS`, `DIRECTIVES` and `PIPES` properties
+
 
 ## Quick start
 
@@ -21,18 +24,33 @@ $ npm install -g yo
 $ npm install -g generator-angular2-library
 ```
 
-Then generate your new library:
+make a new directory and `cd` into it:
+
+```bash
+$ mkdir angular2-library-name
+$ cd angular2-library-name
+```
+
+and generate your new library:
 
 ```bash
 $ yo angular2-library
 ```
 
-The generator creates the following files for you:
+The generator will prompt you for:
+
+```bash
+? Your full name: Jurgen Van de Moere
+? Your email address: jurgen.van.de.moere@gmail.com
+? Your library name (kebab case): angular2-library-name
+? Git repository url: https://github.com/jvandemo/angular2-library-name
+```
+
+and create the following files for you:
 
 ```bash
 .
 ├── angular2-library-name.ts
-├── angular2-library.ts
 ├── package.json
 ├── src
 │   ├── directives
@@ -55,6 +73,18 @@ $ npm run tsc
 ```
 
 to automatically create all `*.js`, `*.js.map` and `*.d.ts` files.
+
+## Issues
+
+Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
+
+## Development
+
+To run the generator unit tests:
+
+```bash
+$ npm run test
+```
 
 ## License
 
