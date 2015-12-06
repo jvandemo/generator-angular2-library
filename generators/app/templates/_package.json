@@ -1,0 +1,33 @@
+{
+  "name": "<%= props.libraryName.kebabCase %>",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "tsc && karma start",
+    "prepublish": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= props.gitRepositoryUrl %>"
+  },
+  "author": {
+    "name": "<%= props.author.name %>",
+    "email": "<%= props.author.email %>"
+  },
+  "keywords": [
+    "angular",
+    "angular2"
+  ],
+  "bugs": {
+    "url": "<%= props.gitRepositoryUrl %>/issues"
+  },
+  "main": "<%= props.libraryName.kebabCase %>.js",
+  "typings": "./<%= props.libraryName.kebabCase %>.d.ts",
+  "dependencies": {
+    "angular2": "^2.0.0-alpha.46",
+    "typescript": "^1.6.2"
+  },
+  "devDependencies": {},
+  "engines": {
+    "node": ">=0.8.0"
+  }
+}
