@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "scripts": {
     "test": "tsc && karma start",
-    "prepublish": "tsc"
+    "prepublish": "tsc",
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
