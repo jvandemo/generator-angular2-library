@@ -40,7 +40,7 @@ module.exports = yeoman.generators.Base.extend({
       {
         type: 'input',
         name: 'libraryName',
-        message: 'Your library name (kebab case)',
+        message: 'Your library name (kebab-case)',
         default: 'angular2-library',
         store: true
       },
