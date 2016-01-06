@@ -5,7 +5,7 @@
 To install this library, run:
 
 ```bash
-$ npm install <%= props.libraryName.kebabCase %>
+$ npm install <%= props.libraryName.kebabCase %> --save
 ```
 
 ## Development
@@ -19,4 +19,3 @@ $ npm run tsc
 ## License
 
 MIT © [<%= props.author.name %>](<%= props.author.email %>)
-

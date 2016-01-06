@@ -2,7 +2,7 @@
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
 
 [Yeoman](http://yeoman.io) generator to create a standalone [Angular 2](https://angular.io/) library in seconds.
- 
+
 If you want to create an Angular 2 library with directives, services and/or pipes, then this generator is just what you need.
 
 The generator:
@@ -13,6 +13,7 @@ The generator:
 - creates the main library file
 - creates a sample directive, component, service and pipe
 - creates boilerplate code to conveniently export `PROVIDERS`, `DIRECTIVES` and `PIPES` properties
+- creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
 
 
 ## Quick start
@@ -83,7 +84,7 @@ As a library author you are free to choose whether you want to do this or not (s
 The benefit is that consumers of your library can easily import bundles of services, directives and pipes:
 
 ```javascript
-import { Component } from 'angular2/angular2';
+import { Component } from 'angular2/core';
 import { PROVIDERS, DIRECTIVES, PIPES } from 'angular2-library-name/angular2-library-name';
 
 @Component({
