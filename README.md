@@ -124,6 +124,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v0.3.0
+
+- Updated to Angular 2 beta
+
 ### v0.2.0
 
 - Added documentation
