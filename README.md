@@ -124,6 +124,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v0.4.0
+
+- Added reference to Angular typings
+
 ### v0.3.1
 
 - Removed explicit RxJS dependency
