@@ -124,6 +124,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v0.5.0
+
+- Added `browser.d.ts` to files in `tsconfig.json` instead of using tripleslash (see #9)
+
 ### v0.4.0
 
 - Added reference to Angular typings
