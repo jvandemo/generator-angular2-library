@@ -1,5 +1,3 @@
-/// <reference path="node_modules/angular2/typings/browser.d.ts" />
-
 import {DIRECTIVES} from './src/directives';
 import {PIPES} from './src/pipes';
 import {PROVIDERS} from './src/services';
