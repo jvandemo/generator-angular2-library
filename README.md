@@ -124,6 +124,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v0.6.0
+
+- Updated dependency versions
+
 ### v0.5.0
 
 - Added `browser.d.ts` to files in `tsconfig.json` instead of using tripleslash (see #9)
