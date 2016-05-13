@@ -1,5 +1,5 @@
-# generator-angular2-library
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url]
+![yeoman-generator-for-angular2-library](https://cloud.githubusercontent.com/assets/1859381/15238684/321b3f06-18db-11e6-9aef-46eccca0b055.png)
+[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 [Yeoman](http://yeoman.io) generator to create a standalone [Angular 2](https://angular.io/) library in seconds.
 
