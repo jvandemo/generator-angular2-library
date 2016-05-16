@@ -1,4 +1,4 @@
-![yeoman-generator-angular2-library](https://cloud.githubusercontent.com/assets/1859381/15290885/8974ac90-1b7b-11e6-9763-f8c33e733127.jpg)
+![angular-2-github-hero](https://cloud.githubusercontent.com/assets/1859381/15291385/d643128a-1b7d-11e6-9e78-173c6e82cf91.jpg)
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 [Yeoman](http://yeoman.io) generator to create a standalone [Angular 2](https://angular.io/) library in seconds.
