@@ -9,12 +9,13 @@ The generator:
 
 - creates and configures `package.json`
 - creates and configures `tsconfig.json`
+- creates and configures `tslint.json`
+- creates and configures `typings.json`
 - creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
 - creates the main library file
 - creates a sample directive, component, service and pipe
 - creates boilerplate code to conveniently export `PROVIDERS`, `DIRECTIVES` and `PIPES` properties
 - creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
-
 
 ## Quick start
 
@@ -64,12 +65,18 @@ and create the following files for you:
 │   ├── services
 │   │   └── sample.service.ts
 │   └── services.ts
-└── tsconfig.json
+├── tsconfig.json
+├── tslint.json
+└── typings.json
 ```
 
 You can then add or edit `*.ts` files and run:
 
 ```bash
+# Lint code
+# npm run lint
+
+# Compile library
 $ npm run tsc
 ```
 
@@ -123,6 +130,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v1.1.1
+
+- Updated templates to Angular 2.0.0 RC1 syntax
 
 ### v1.1.0
 
