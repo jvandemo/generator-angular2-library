@@ -16,6 +16,12 @@ To generate all `*.js`, `*.js.map` and `*.d.ts` files:
 $ npm run tsc
 ```
 
+To lint all `*.ts` files:
+
+```bash
+$ npm run lint
+```
+
 ## License
 
 MIT © [<%= props.author.name %>](<%= props.author.email %>)
