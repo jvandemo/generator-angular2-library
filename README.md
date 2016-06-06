@@ -16,6 +16,7 @@ The generator:
 - creates a sample directive, component, service and pipe
 - creates boilerplate code to conveniently export `PROVIDERS`, `DIRECTIVES` and `PIPES` properties
 - creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
+- configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
 
 ## Quick start
 
@@ -73,14 +74,18 @@ and create the following files for you:
 You can then add or edit `*.ts` files and run:
 
 ```bash
-# Lint code
-# npm run lint
-
-# Compile library
 $ npm run tsc
 ```
 
 to automatically create all `*.js`, `*.js.map` and `*.d.ts` files.
+
+## Tslint
+
+Everything comes pre-configured with tslint and codelyzer support. To lint your code:
+
+```bash
+$ npm run lint
+```
 
 ## `PROVIDERS`, `DIRECTIVES` and `PIPES`
 
