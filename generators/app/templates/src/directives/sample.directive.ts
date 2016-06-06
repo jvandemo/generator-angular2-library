@@ -5,7 +5,7 @@ import {Directive, ElementRef} from '@angular/core';
 })
 export class SampleDirective {
 
-  constructor(private el:ElementRef){
+  constructor(private el: ElementRef) {
 
   }
 
