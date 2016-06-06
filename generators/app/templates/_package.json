@@ -2,9 +2,12 @@
   "name": "<%= props.libraryName.kebabCase %>",
   "version": "0.1.0",
   "scripts": {
+    "lint": "tslint src/**/*.ts\"",
     "test": "tsc && karma start",
+    "postinstall": "typings install",
     "prepublish": "tsc",
-    "tsc": "tsc"
+    "tsc": "tsc",
+    "typings": "typings"
   },
   "repository": {
     "type": "git",
@@ -25,10 +28,14 @@
   "main": "<%= props.libraryName.kebabCase %>.js",
   "typings": "./<%= props.libraryName.kebabCase %>.d.ts",
   "dependencies": {
-    "angular2": "^2.0.0-rc.1",
-    "typescript": "^1.6.2"
+    "@angular/core": "2.0.0-rc.1"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "codelyzer": "^0.0.20",
+    "tslint": "^3.6.0",
+    "typescript": "^1.8.10",
+    "typings":"^1.0.4"
+  },
   "engines": {
     "node": ">=0.8.0"
   }

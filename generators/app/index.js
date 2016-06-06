@@ -115,6 +115,16 @@ module.exports = yeoman.Base.extend({
       );
     },
 
+    copyTypeScriptLintConfig: function copyTypeScriptLintConfig() {
+      this.fs.copyTpl(
+        this.templatePath('_tslint.json'),
+        this.destinationPath('tslint.json'),
+        {
+          props: this.props
+        }
+      );
+    },
+
     copyPackageJson: function copyPackageJson() {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
