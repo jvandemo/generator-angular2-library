@@ -9,7 +9,7 @@
     "declaration": true
   },
   "files": [
-    "node_modules/angular2/typings/browser.d.ts",
+    "typings/index.d.ts",
     "<%= props.libraryName.kebabCase %>.ts"
   ],
   "exclude": [

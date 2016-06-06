@@ -125,6 +125,16 @@ module.exports = yeoman.Base.extend({
       );
     },
 
+    copyTypingsConfig: function copyTypingsConfig() {
+      this.fs.copyTpl(
+        this.templatePath('_typings.json'),
+        this.destinationPath('typings.json'),
+        {
+          props: this.props
+        }
+      );
+    },
+
     copyPackageJson: function copyPackageJson() {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
