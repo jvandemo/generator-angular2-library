@@ -124,6 +124,12 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v1.1.0
+
+- Added codelyzer support
+- Added tslint support
+- Added typings support
+
 ### v1.0.0
 
 - BREAKING CHANGE: Updated to support [Angular 2.0.0-rc.1](https://github.com/angular/angular/blob/master/CHANGELOG.md#200-rc1-2016-05-03)
