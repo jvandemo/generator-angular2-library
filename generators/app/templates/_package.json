@@ -2,7 +2,7 @@
   "name": "<%= props.libraryName.kebabCase %>",
   "version": "0.1.0",
   "scripts": {
-    "lint": "tslint src/**/*.ts\"",
+    "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
     "postinstall": "typings install",
     "prepublish": "tsc",
