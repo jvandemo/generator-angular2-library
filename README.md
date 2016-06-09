@@ -7,10 +7,10 @@ If you want to create an Angular 2 library with directives, services and/or pipe
 
 The generator:
 
-- creates and configures `package.json`
-- creates and configures `tsconfig.json`
-- creates and configures `tslint.json`
-- creates and configures `typings.json`
+- creates and configures `package.json` for your library
+- creates and configures `tsconfig.json` for your library
+- creates and configures `tslint.json` for your library
+- creates and configures `typings.json` for your library
 - creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
 - creates the main library file
 - creates a sample directive, component, service and pipe
@@ -53,13 +53,17 @@ and create the following files for you:
 
 ```bash
 .
-├── angular2-library-name.ts
+├── .gitignore
+├── .npmignore
+├── .travis.yml
 ├── package.json
+├── README.md
 ├── src
 │   ├── directives
 │   │   ├── sample.component.ts
 │   │   └── sample.directive.ts
 │   ├── directives.ts
+│   ├── index.ts
 │   ├── pipes
 │   │   └── sample.pipe.ts
 │   ├── pipes.ts
@@ -71,13 +75,13 @@ and create the following files for you:
 └── typings.json
 ```
 
-You can then add or edit `*.ts` files and run:
+You can then add or edit `*.ts` files in the `src/` directory and run:
 
 ```bash
 $ npm run tsc
 ```
 
-to automatically create all `*.js`, `*.js.map` and `*.d.ts` files.
+to automatically create all `*.js`, `*.js.map` and `*.d.ts` files in the `dist/` directory.
 
 ## Tslint
 
