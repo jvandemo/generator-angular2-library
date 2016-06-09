@@ -6,13 +6,15 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
-    "declaration": true
+    "declaration": true,
+    "outDir": "./dist"
   },
   "files": [
     "typings/index.d.ts",
-    "<%= props.libraryName.kebabCase %>.ts"
+    "src/index.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

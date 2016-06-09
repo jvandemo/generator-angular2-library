@@ -153,14 +153,8 @@ module.exports = yeoman.Base.extend({
           props: this.props
         }
       );
-    },
-
-    copyMain: function copyMain() {
-      this.fs.copy(
-        this.templatePath('main.ts'),
-        this.destinationPath(this.props.libraryName.kebabCase + '.ts')
-      );
     }
+    
   },
 
   install: function () {

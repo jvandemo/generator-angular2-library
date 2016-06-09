@@ -25,8 +25,8 @@
   "bugs": {
     "url": "<%= props.gitRepositoryUrl %>/issues"
   },
-  "main": "<%= props.libraryName.kebabCase %>.js",
-  "typings": "./<%= props.libraryName.kebabCase %>.d.ts",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
   "dependencies": {
     "@angular/core": "2.0.0-rc.1"
   },
