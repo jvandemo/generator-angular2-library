@@ -46,7 +46,7 @@ describe('generator-angular-2-library:app', function () {
 
   it('should create main library file', function () {
     assert.file([
-      'angular2-library-name.ts'
+      'src/index.ts'
     ]);
   });
 
