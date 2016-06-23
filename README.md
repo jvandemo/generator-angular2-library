@@ -140,6 +140,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v2.1.0
+
+- Updated templates to Angular 2.0.0 RC3 syntax
+
 ### v2.0.0
 
 - Updated with file structure using `src` and `dist` directory
