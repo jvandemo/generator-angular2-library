@@ -142,6 +142,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v2.2.0
+
+- Updated dependencies in package.json to Angular 2 final
+
 ### v2.1.0
 
 - Updated templates to Angular 2.0.0 RC3 syntax
