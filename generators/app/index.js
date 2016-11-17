@@ -153,6 +153,16 @@ module.exports = yeoman.Base.extend({
           props: this.props
         }
       );
+    },
+
+    copyIndex: function copyIndex() {
+      this.fs.copyTpl(
+        this.templatePath('index.ts'),
+        this.destinationPath('index.ts'),
+        {
+          props: this.props
+        }
+      );
     }
   },
 

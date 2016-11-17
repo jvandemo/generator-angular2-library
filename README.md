@@ -14,7 +14,6 @@ The generator:
 - creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
 - creates the main library file
 - creates a sample directive, component, service and pipe
-- creates boilerplate code to conveniently export `PROVIDERS`, `DIRECTIVES` and `PIPES` properties
 - creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
 
@@ -55,23 +54,14 @@ and create the following files for you:
 
 ```bash
 .
-├── .gitignore
-├── .npmignore
-├── .travis.yml
+├── README.MD
+├── index.ts
 ├── package.json
-├── README.md
 ├── src
-│   ├── directives
-│   │   ├── sample.component.ts
-│   │   └── sample.directive.ts
-│   ├── directives.ts
-│   ├── index.ts
-│   ├── pipes
-│   │   └── sample.pipe.ts
-│   ├── pipes.ts
-│   ├── services
-│   │   └── sample.service.ts
-│   └── services.ts
+│   ├── sample.component.ts
+│   ├── sample.directive.ts
+│   ├── sample.pipe.ts
+│   └── sample.service.ts
 ├── tsconfig.json
 ├── tslint.json
 └── typings.json
@@ -93,31 +83,46 @@ Everything comes pre-configured with tslint and codelyzer support. To lint your 
 $ npm run lint
 ```
 
-## `PROVIDERS`, `DIRECTIVES` and `PIPES`
+## Consuming your library
 
-The generator automatically prepares boilerplate code to export convenient bundle properties.
+Once you have published your library to npm, you can import your library in any Angular application by running:
 
-As a library author you are free to choose whether you want to do this or not (see [this discussion](https://github.com/angular/angular/issues/5503)).
-
-The benefit is that consumers of your library can easily import bundles of services, directives and pipes:
-
-```javascript
-import { Component } from 'angular2/core';
-import { PROVIDERS, DIRECTIVES, PIPES } from 'angular2-library-name/angular2-library-name';
-
-@Component({
-  selector: 'app'
-  providers: [PROVIDERS]
-  directives: [DIRECTIVES],
-  pipes: [PIPES]
-})
-export class AppComponent{
-  // ...
-}
-
+```bash
+$ npm install sample-library # use the name you used to publish to npm
 ```
 
-The Angular team uses a similar approach with `CORE_DIRECTIVES`, `FORM_DIRECTIVES` and `ROUTER_PROVIDERS`.
+and then from your Angular AppModule:
+
+```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+
+import { AppComponent } from './app.component';
+
+// Import your library
+import { SampleModule } from 'sample-library';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule,
+    
+    // Specify your library as an import
+    LibraryModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+Once your library is imported, you can use its components, directives and pipes in your Angular application.
 
 ## To do
 
