@@ -91,13 +91,11 @@ Once you have published your library to npm, you can import your library in any 
 $ npm install sample-library # use the name you used to publish to npm
 ```
 
-and then from your Angular AppModule:
+and then from your Angular `AppModule`:
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 
@@ -110,8 +108,6 @@ import { SampleModule } from 'sample-library';
   ],
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpModule,
     
     // Specify your library as an import
     LibraryModule
@@ -122,7 +118,15 @@ import { SampleModule } from 'sample-library';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application.
+Once your library is imported, you can use its components, directives and pipes in your Angular application:
+
+```xml
+<!-- You can now use your library component in app.component.html -->
+<h1>
+  {{title}}
+</h1>
+<sampleComponent></sampleComponent>
+```
 
 ## To do
 
@@ -146,6 +150,14 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v3.0.1
+
+- Fix `tsconfig.json` files
+
+### v3.0.0
+
+- Add support for `NgModule`
 
 ### v2.2.0
 
