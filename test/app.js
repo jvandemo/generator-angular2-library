@@ -46,29 +46,31 @@ describe('generator-angular-2-library:app', function () {
 
   it('should create main library file', function () {
     assert.file([
-      'src/index.ts'
+      'index.ts'
     ]);
   });
 
-  it('should create sample pipes', function () {
+  it('should create sample component', function () {
     assert.file([
-      'src/pipes.ts',
-      'src/pipes/sample.pipe.ts'
+      'src/sample.component.ts'
     ]);
   });
 
-  it('should create sample services', function () {
+  it('should create sample directive', function () {
     assert.file([
-      'src/services.ts',
-      'src/services/sample.service.ts'
+      'src/sample.directive.ts'
     ]);
   });
 
-  it('should create sample directives', function () {
+  it('should create sample pipe', function () {
     assert.file([
-      'src/directives.ts',
-      'src/directives/sample.directive.ts',
-      'src/directives/sample.component.ts'
+      'src/sample.pipe.ts'
+    ]);
+  });
+
+  it('should create sample service', function () {
+    assert.file([
+      'src/sample.service.ts'
     ]);
   });
 
