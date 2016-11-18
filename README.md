@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v3.0.3
+
+- Fix unit tests
+
 ### v3.0.2
 
 - Fix `README.md` example code
