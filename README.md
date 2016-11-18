@@ -85,13 +85,13 @@ $ npm run lint
 
 ## Consuming your library
 
-Once you have published your library to npm, you can import your library in any Angular application by running:
+Once you have published your library to the NPM registry, you can import it in any Angular application by first installing it using NPM:
 
 ```bash
 $ npm install sample-library # use the name you used to publish to npm
 ```
 
-and then from your Angular `AppModule`:
+and then importing your library in your Angular `AppModule` (or whatever module you wish to import your library into):
 
 ```typescript
 import { BrowserModule } from '@angular/platform-browser';
@@ -118,19 +118,41 @@ import { SampleModule } from 'sample-library';
 export class AppModule { }
 ```
 
-Once your library is imported, you can use its components, directives and pipes in your Angular application:
+Once your shared library is imported, you can use its components, directives and pipes in your Angular application templates:
 
 ```xml
-<!-- You can now use your library component in app.component.html -->
-<h1>
-  {{title}}
-</h1>
-<sampleComponent></sampleComponent>
+<!-- app.component.html -->
+<h1>{{ title }}</h1>
+<sampleComponent>
+  This component is part of the shared library and will now work as expected.
+</sampleComponent>
 ```
+
+and if you need to access a service from your shared library, you can inject it using Dependency Injection:
+
+```typescript
+import { Component } from '@angular/core';
+
+// Import the shared service
+import { SampleService } from 'sample-library';
+
+@Component({
+  template: 'Injecting a service from the shared library'
+})
+export class HomeComponent {
+
+  // Inject the service using Angular DI 
+  constructor(private _sampleService: SampleService){
+  
+  }
+
+}
+```
+
+To learn more about Angular Dependency Injection, check out the [Official Angular Documentation](https://angular.io/docs/ts/latest/cookbook/dependency-injection.html).
 
 ## To do
 
-- Create build process for building library that automatically registers with SystemJS so it can be hosted statically and imported using `<script>` element
 - Create process for running unit tests
 
 ## Issues
