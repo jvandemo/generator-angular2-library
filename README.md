@@ -176,7 +176,7 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 ### v3.0.4
 
 - Update version of Codelyzer
-- Update selector of sample component to kebab case
+- Update selector of sample component to kebab case to fix #21
 
 ### v3.0.3
 
