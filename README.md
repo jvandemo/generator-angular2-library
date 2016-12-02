@@ -173,6 +173,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v3.0.4
+
+- Update version of Codelyzer
+- Update selector of sample component to kebab case
+
 ### v3.0.3
 
 - Fix unit tests
