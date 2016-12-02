@@ -175,24 +175,24 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ### v3.0.4
 
-- Update version of Codelyzer
-- Update selector of sample component to kebab case to fix #21
+- Updated version of Codelyzer
+- Updated selector of sample component to kebab case to fix #21
 
 ### v3.0.3
 
-- Fix unit tests
+- Fixed unit tests
 
 ### v3.0.2
 
-- Fix `README.md` example code
+- Fixed `README.md` example code
 
 ### v3.0.1
 
-- Fix `tsconfig.json` files
+- Fixed `tsconfig.json` files
 
 ### v3.0.0
 
-- Add support for `NgModule`
+- Added support for `NgModule`
 
 ### v2.2.0
 
