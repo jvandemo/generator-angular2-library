@@ -25,7 +25,7 @@ export * from './src/sample.service';
     SamplePipe
   ]
 })
-export default class SampleModule {
+export class SampleModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SampleModule,
