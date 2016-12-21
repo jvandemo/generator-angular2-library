@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v4.0.0
+
+- Remove default keyword when exporting module to fix #23
+
 ### v3.0.4
 
 - Updated version of Codelyzer
