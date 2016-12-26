@@ -69,4 +69,4 @@ $ npm run lint
 
 ## License
 
-MIT © [<%= props.author.name %>](<%= props.author.email %>)
+MIT © [<%= props.author.name %>](mailto:<%= props.author.email %>)
