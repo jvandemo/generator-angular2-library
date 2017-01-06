@@ -4,10 +4,8 @@
   "scripts": {
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
-    "postinstall": "typings install",
     "prepublish": "tsc",
-    "tsc": "tsc",
-    "typings": "typings"
+    "tsc": "tsc"
   },
   "repository": {
     "type": "git",
@@ -26,7 +24,6 @@
     "url": "<%= props.gitRepositoryUrl %>/issues"
   },
   "main": "./dist/index.js",
-  "typings": "./dist/index.d.ts",
   "dependencies": {
   },
   "devDependencies": {
@@ -36,8 +33,11 @@
     "rxjs": "^5.0.1",
     "tslint": "^3.15.1",
     "typescript": "2.0.2",
-    "typings":"^1.0.4",
-    "zone.js": "0.7.2"
+    "zone.js": "0.7.2",
+    "@types/es6-shim": "^0.31.32",
+    "@types/protractor": "^4.0.0",
+    "@types/jasmine": "^2.5.40",
+    "@types/selenium-webdriver": "^2.53.39"
   },
   "engines": {
     "node": ">=0.8.0"

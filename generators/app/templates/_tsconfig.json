@@ -7,10 +7,12 @@
     "experimentalDecorators": true,
     "sourceMap": true,
     "declaration": true,
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "typeRoots": [
+      "node_modules/@types"
+    ]
   },
   "files": [
-    "typings/index.d.ts",
     "index.ts"
   ],
   "exclude": [
