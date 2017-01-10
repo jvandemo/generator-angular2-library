@@ -10,12 +10,12 @@ The generator:
 - creates and configures `package.json` for your library
 - creates and configures `tsconfig.json` for your library
 - creates and configures `tslint.json` for your library
-- creates and configures `typings.json` for your library
 - creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
 - creates the main library file
 - creates a sample directive, component, service and pipe
 - creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
+- supports [@types](https://www.npmjs.com/~types)
 
 ## Quick start
 
@@ -172,6 +172,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v5.0.0
+
+- Replace typings with @types (#29)
 
 ### v4.0.0
 
