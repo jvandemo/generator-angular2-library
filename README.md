@@ -173,6 +173,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.1.0
+
+- Add support for AOT compilation
+- Update Angular 2 references to just Angular
+
 ### v5.0.0
 
 - Replace typings with @types (#29)

@@ -17,6 +17,10 @@
   ],
   "exclude": [
     "node_modules",
-    "dist"
-  ]
+    "dist",
+    "**/*.spec.ts"
+  ],
+  "angularCompilerOptions": {
+    "strictMetadataEmit": true
+  }
 }

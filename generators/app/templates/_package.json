@@ -2,6 +2,7 @@
   "name": "<%= props.libraryName.kebabCase %>",
   "version": "0.1.0",
   "scripts": {
+    "build": "ngc -p tsconfig.json",
     "lint": "tslint src/**/*.ts",
     "test": "tsc && karma start",
     "prepublish": "tsc",
@@ -28,6 +29,9 @@
   "devDependencies": {
     "@angular/core": "^2.0.0",
     "@angular/common": "^2.0.0",
+    "@angular/compiler-cli": "^2.4.5",
+    "@angular/core": "^2.0.0",
+    "@angular/platform-server": "^2.4.5",
     "codelyzer": "^0.0.28",
     "rxjs": "^5.0.1",
     "tslint": "^3.15.1",
