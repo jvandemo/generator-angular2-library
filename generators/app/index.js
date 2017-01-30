@@ -9,7 +9,7 @@ module.exports = yeoman.Base.extend({
 
     // Have Yeoman greet the user.
     this.log(yosay(
-      'Welcome to the ' + chalk.red('Angular 2 Library') + ' generator!'
+      'Welcome to the ' + chalk.red('Angular Library') + ' generator!'
     ));
 
     var prompts = [
@@ -41,7 +41,7 @@ module.exports = yeoman.Base.extend({
         type: 'input',
         name: 'libraryName',
         message: 'Your library name (kebab-case)',
-        default: 'angular2-library',
+        default: 'angular-library',
         store: true
       },
       {

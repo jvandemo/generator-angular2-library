@@ -16,8 +16,7 @@
     "email": "<%= props.author.email %>"
   },
   "keywords": [
-    "angular",
-    "angular2"
+    "angular"
   ],
   "license": "MIT",
   "bugs": {
