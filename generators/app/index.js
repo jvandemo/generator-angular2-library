@@ -2,6 +2,7 @@
 var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
+var _s = require('underscore.string');
 
 module.exports = yeoman.Base.extend({
   prompting: function () {
@@ -41,8 +42,8 @@ module.exports = yeoman.Base.extend({
         type: 'input',
         name: 'libraryName',
         message: 'Your library name (kebab-case)',
-        default: 'angular-library',
-        store: true
+        default: _s.slugify(this.appname),
+        filter: x => _s.slugify(x)
       },
       {
         type: 'input',
