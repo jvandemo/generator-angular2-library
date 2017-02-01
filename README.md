@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.2.0
+
+- Suggest better default library name
+
 ### v5.1.0
 
 - Add support for AOT compilation
