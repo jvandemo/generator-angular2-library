@@ -173,6 +173,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.2.1
+
+- Fix eslint errors
+- Remove duplicate dependency
+
 ### v5.2.0
 
 - Suggest better default library name
