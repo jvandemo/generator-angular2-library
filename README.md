@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.3.0
+
+- Update TypeScript version to fix #41
+
 ### v5.2.1
 
 - Fix eslint errors
