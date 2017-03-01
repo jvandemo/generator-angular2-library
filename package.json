@@ -9,6 +9,8 @@
     "url": "http://www.jvandemo.com"
   },
   "files": [
+    "LICENSE",
+    "README.md",
     "generators"
   ],
   "main": "generators/index.js",
