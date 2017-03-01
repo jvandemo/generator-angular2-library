@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.5.1
+
+- Add README.md to package.json so NPM registry can display it
+
 ### v5.5.0
 
 - Update devDependencies
