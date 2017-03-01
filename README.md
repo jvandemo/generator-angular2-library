@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.5.0
+
+- Update devDependencies
+
 ### v5.4.0
 
 - Update to latest tslint and codelyzer
