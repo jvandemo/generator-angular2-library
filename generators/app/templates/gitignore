@@ -24,3 +24,6 @@ Desktop.ini
 # Mac
 .DS_Store
 **/.DS_Store
+
+# Ngc generated files
+**/*.ngfactory.ts
