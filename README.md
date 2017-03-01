@@ -173,6 +173,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v5.4.0
+
+- Update to latest tslint and codelyzer
+
 ### v5.3.0
 
 - Update TypeScript version to fix #41
