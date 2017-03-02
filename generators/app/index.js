@@ -3,16 +3,22 @@ var yeoman = require('yeoman-generator');
 var chalk = require('chalk');
 var yosay = require('yosay');
 var underscoreString = require('underscore.string');
+var Generator = require('yeoman-generator');
 
-module.exports = yeoman.Base.extend({
-  prompting: function () {
-    var done = this.async();
+module.exports =  class extends Generator {
 
+  constructor(args, opts) {
+    super(args, opts);
+  }
+
+  initializing() {
     // Have Yeoman greet the user.
     this.log(yosay(
       'Welcome to the ' + chalk.red('Angular Library') + ' generator!'
     ));
+  }
 
+  prompting() {
     var prompts = [
       {
         type: 'input',
@@ -56,7 +62,7 @@ module.exports = yeoman.Base.extend({
       }
     ];
 
-    this.prompt(prompts, function (props) {
+    return this.prompt(prompts).then(props => {
 
       this.props = {
 
@@ -73,93 +79,82 @@ module.exports = yeoman.Base.extend({
         gitRepositoryUrl: props.gitRepositoryUrl
       };
 
-      done();
-    }.bind(this));
+    });
+  }
 
-  },
+  writing() {
+    
+    // Copy .gitignore
+    this.fs.copy(
+      this.templatePath('gitignore'),
+      this.destinationPath('.gitignore')
+    );
 
-  writing: {
+    // Copy .npmignore
+    this.fs.copy(
+      this.templatePath('npmignore'),
+      this.destinationPath('.npmignore')
+    );
 
-    copyGitIgnore: function copyGitIgnore() {
-      this.fs.copy(
-        this.templatePath('gitignore'),
-        this.destinationPath('.gitignore')
-      );
-    },
+    // Copy .travis.yml
+    this.fs.copy(
+      this.templatePath('travis.yml'),
+      this.destinationPath('.travis.yml')
+    );
 
-    copyNpmIgnore: function copyNpmIgnore() {
-      this.fs.copy(
-        this.templatePath('npmignore'),
-        this.destinationPath('.npmignore')
-      );
-    },
+    // Copy src folder
+    this.fs.copy(
+      this.templatePath('src/**/*'),
+      this.destinationPath('src')
+    );
 
-    copyTravisYml: function copyTravisYml() {
-      this.fs.copy(
-        this.templatePath('travis.yml'),
-        this.destinationPath('.travis.yml')
-      );
-    },
+    // Copy tsconfig.json
+    this.fs.copyTpl(
+      this.templatePath('_tsconfig.json'),
+      this.destinationPath('tsconfig.json'),
+      {
+        props: this.props
+      }
+    );
 
-    copySrc: function copySrc() {
-      this.fs.copy(
-        this.templatePath('src/**/*'),
-        this.destinationPath('src')
-      );
-    },
+    // Copy tslint.json
+    this.fs.copyTpl(
+      this.templatePath('_tslint.json'),
+      this.destinationPath('tslint.json'),
+      {
+        props: this.props
+      }
+    );
 
-    copyTypeScriptConfig: function copyTypeScriptConfig() {
-      this.fs.copyTpl(
-        this.templatePath('_tsconfig.json'),
-        this.destinationPath('tsconfig.json'),
-        {
-          props: this.props
-        }
-      );
-    },
+    // Copy package.json
+    this.fs.copyTpl(
+      this.templatePath('_package.json'),
+      this.destinationPath('package.json'),
+      {
+        props: this.props
+      }
+    );
 
-    copyTypeScriptLintConfig: function copyTypeScriptLintConfig() {
-      this.fs.copyTpl(
-        this.templatePath('_tslint.json'),
-        this.destinationPath('tslint.json'),
-        {
-          props: this.props
-        }
-      );
-    },
+    // Copy README
+    this.fs.copyTpl(
+      this.templatePath('README.MD'),
+      this.destinationPath('README.MD'),
+      {
+        props: this.props
+      }
+    );
 
-    copyPackageJson: function copyPackageJson() {
-      this.fs.copyTpl(
-        this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        {
-          props: this.props
-        }
-      );
-    },
+    // Copy index.ts
+    this.fs.copyTpl(
+      this.templatePath('index.ts'),
+      this.destinationPath('index.ts'),
+      {
+        props: this.props
+      }
+    );
+  }
 
-    copyREADME: function copyREADME() {
-      this.fs.copyTpl(
-        this.templatePath('README.MD'),
-        this.destinationPath('README.MD'),
-        {
-          props: this.props
-        }
-      );
-    },
-
-    copyIndex: function copyIndex() {
-      this.fs.copyTpl(
-        this.templatePath('index.ts'),
-        this.destinationPath('index.ts'),
-        {
-          props: this.props
-        }
-      );
-    }
-  },
-
-  install: function () {
+  install() {
     this.installDependencies({bower: false});
   }
-});
+}
