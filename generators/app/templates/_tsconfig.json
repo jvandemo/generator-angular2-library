@@ -14,9 +14,6 @@
       "node_modules/@types"
     ]
   },
-  "files": [
-    "index.ts"
-  ],
   "exclude": [
     "node_modules",
     "dist",
