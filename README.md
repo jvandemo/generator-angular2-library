@@ -123,9 +123,9 @@ Once your shared library is imported, you can use its components, directives and
 ```xml
 <!-- app.component.html -->
 <h1>{{ title }}</h1>
-<sampleComponent>
+<sample-component>
   This component is part of the shared library and will now work as expected.
-</sampleComponent>
+</sample-component>
 ```
 
 and if you need to access a service from your shared library, you can inject it using Dependency Injection:
