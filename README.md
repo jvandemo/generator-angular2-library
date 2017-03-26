@@ -19,7 +19,7 @@ The generator:
 
 ## Quick start
 
-![generator-angular2-library-demo](https://cloud.githubusercontent.com/assets/1859381/16332792/45936764-39f8-11e6-884b-c7095bafc59b.gif)
+![generator-angular2-library-demo](https://cloud.githubusercontent.com/assets/1859381/24336142/43afb036-128a-11e7-9505-9dcae1dd4f56.gif)
 
 First, install [Yeoman](http://yeoman.io) and generator-angular2-library using [npm](https://www.npmjs.com/) (assuming you already have [node.js](https://nodejs.org/) pre-installed).
 
