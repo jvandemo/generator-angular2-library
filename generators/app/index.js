@@ -1,5 +1,4 @@
 'use strict';
-const yeoman = require('yeoman-generator');
 const chalk = require('chalk');
 const yosay = require('yosay');
 const underscoreString = require('underscore.string');
