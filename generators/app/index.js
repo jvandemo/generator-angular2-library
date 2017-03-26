@@ -1,11 +1,11 @@
 'use strict';
-var yeoman = require('yeoman-generator');
-var chalk = require('chalk');
-var yosay = require('yosay');
-var underscoreString = require('underscore.string');
-var Generator = require('yeoman-generator');
+const yeoman = require('yeoman-generator');
+const chalk = require('chalk');
+const yosay = require('yosay');
+const underscoreString = require('underscore.string');
+const Generator = require('yeoman-generator');
 
-module.exports =  class extends Generator {
+module.exports = class extends Generator {
 
   constructor(args, opts) {
     super(args, opts);
@@ -19,7 +19,7 @@ module.exports =  class extends Generator {
   }
 
   prompting() {
-    var prompts = [
+    const prompts = [
       {
         type: 'input',
         name: 'authorName',
@@ -49,7 +49,7 @@ module.exports =  class extends Generator {
         name: 'libraryName',
         message: 'Your library name (kebab-case)',
         default: underscoreString.slugify(this.appname),
-        filter: function (x){
+        filter: function (x) {
           return underscoreString.slugify(x);
         }
       },
@@ -83,7 +83,7 @@ module.exports =  class extends Generator {
   }
 
   writing() {
-    
+
     // Copy .gitignore
     this.fs.copy(
       this.templatePath('gitignore'),
@@ -157,4 +157,4 @@ module.exports =  class extends Generator {
   install() {
     this.installDependencies({bower: false});
   }
-}
+};
