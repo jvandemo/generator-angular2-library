@@ -40,7 +40,7 @@ $ cd angular-library-name
 and generate your new library:
 
 ```bash
-$ yo angular-library
+$ yo angular2-library
 ```
 
 The generator will prompt you for:
