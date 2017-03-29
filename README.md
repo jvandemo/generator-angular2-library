@@ -1,9 +1,9 @@
 ![generator-angular-2-library](https://cloud.githubusercontent.com/assets/1859381/15875067/91043b32-2d06-11e6-8ab5-de4dfcd0bfa8.jpg)
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
-[Yeoman](http://yeoman.io) generator to create a standalone [Angular 2](https://angular.io/) library in seconds.
+[Yeoman](http://yeoman.io) generator to create a standalone [Angular](https://angular.io/) library in seconds.
 
-If you want to create an Angular 2 library with directives, services and/or pipes, then this generator is just what you need.
+If you want to create an Angular library with directives, services and/or pipes, then this generator is just what you need.
 
 The generator:
 
@@ -16,6 +16,8 @@ The generator:
 - creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
 - supports [@types](https://www.npmjs.com/~types)
+
+This generator is built for Angular version 2 and above, hence the name generator-angular2-library. If you are looking for a similar generator for AngularJS 1.x, please visit [generator-angularjs-library](https://github.com/jvandemo/generator-angularjs-library).
 
 ## Quick start
 
@@ -31,14 +33,14 @@ $ npm install -g generator-angular2-library
 make a new directory and `cd` into it:
 
 ```bash
-$ mkdir angular2-library-name
-$ cd angular2-library-name
+$ mkdir angular-library-name
+$ cd angular-library-name
 ```
 
 and generate your new library:
 
 ```bash
-$ yo angular2-library
+$ yo angular-library
 ```
 
 The generator will prompt you for:
@@ -46,7 +48,7 @@ The generator will prompt you for:
 ```bash
 ? Your full name: Jurgen Van de Moere
 ? Your email address: jurgen.van.de.moere@gmail.com
-? Your library name (kebab case): angular2-library-name
+? Your library name (kebab case): angular-library-name
 ? Git repository url: https://github.com/jvandemo/angular2-library-name
 ```
 
@@ -172,6 +174,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v7.0.0
+
+- Update to Angular 4
 
 ### v6.0.0
 
