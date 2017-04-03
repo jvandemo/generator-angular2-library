@@ -144,7 +144,7 @@ import { SampleService } from 'sample-library';
 export class HomeComponent {
 
   // Inject the service using Angular DI 
-  constructor(private _sampleService: SampleService){
+  constructor(private sampleService: SampleService){
   
   }
 
@@ -245,7 +245,7 @@ To consume your library before you publish it to npm, you can follow the followi
   export class HomeComponent {
   
     // Inject the service using Angular DI 
-    constructor(private _sampleService: SampleService){
+    constructor(private sampleService: SampleService){
     
     }
   
