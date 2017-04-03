@@ -251,6 +251,12 @@ To consume your library before you publish it to npm, you can follow the followi
   
   }
   ```
+  
+10. When you make a change to your library, recompile your library files again from your `sample-library` directory:
+  ```
+  $ npm run tsc
+  ```  
+  
 
 ## To do
 
