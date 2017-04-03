@@ -153,6 +153,98 @@ export class HomeComponent {
 
 To learn more about Angular Dependency Injection, check out the [Official Angular Documentation](https://angular.io/docs/ts/latest/cookbook/dependency-injection.html).
 
+## Consuming your library during development
+
+To consume your library before you publish it to npm, you can follow the following steps:
+
+1. Create your library:
+  ```
+  $ yo angular2-library
+  ```
+  Let's assume you name your library `sample-library`.
+2. Navigate to the `sample-library` directory:
+  ```
+  $ cd sample-library
+  ```
+3. Compile your library files:
+  ```
+  $ npm run tsc
+  ```
+4. From the `sample-library` directory, create a symlink in the global node_modules directory to this library:
+  ```
+  $ npm link
+  ```
+5. Create a new Angular app. Let's assume you use angular-cli:
+  ```
+  $ cd /your-projects-path
+  $ ng new my-app
+  ```
+6. Navigate to the `my-app` directory:
+  ```
+  $ cd my-app
+  ``` 
+7. From the `my-app` directory, link the global `sample-library` directory to node_modules of the `my-app` directory:
+  ```
+  $ npm link sample-library
+  ```
+8. Import `SampleModule` in your Angular application:
+
+  ```typescript
+  import { BrowserModule } from '@angular/platform-browser';
+  import { NgModule } from '@angular/core';
+  
+  import { AppComponent } from './app.component';
+  
+  // Import your library
+  import { SampleModule } from 'sample-library';
+  
+  @NgModule({
+    declarations: [
+      AppComponent
+    ],
+    imports: [
+      BrowserModule,
+      
+      // Specify your library as an import
+      LibraryModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
+  })
+  export class AppModule { }
+  ```
+
+9. Once your shared library is imported, you can use its components, directives and pipes in your Angular application templates:
+
+  ```xml
+  <!-- app.component.html -->
+  <h1>{{ title }}</h1>
+  <sampleComponent>
+    This component is part of the shared library and will now work as expected.
+  </sampleComponent>
+  ```
+  
+  and if you need to access a service from your shared library, you can inject it using Dependency Injection:
+  
+  ```typescript
+  import { Component } from '@angular/core';
+  
+  // Import the shared service
+  import { SampleService } from 'sample-library';
+  
+  @Component({
+    template: 'Injecting a service from the shared library'
+  })
+  export class HomeComponent {
+  
+    // Inject the service using Angular DI 
+    constructor(private _sampleService: SampleService){
+    
+    }
+  
+  }
+  ```
+
 ## To do
 
 - Create process for running unit tests
