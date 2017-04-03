@@ -162,31 +162,38 @@ To consume your library before you publish it to npm, you can follow the followi
   $ yo angular2-library
   ```
   Let's assume you name your library `sample-library`.
+  
 2. Navigate to the `sample-library` directory:
   ```
   $ cd sample-library
   ```
+  
 3. Compile your library files:
   ```
   $ npm run tsc
   ```
+  
 4. From the `sample-library` directory, create a symlink in the global node_modules directory to this library:
   ```
   $ npm link
   ```
+  
 5. Create a new Angular app. Let's assume you use angular-cli:
   ```
   $ cd /your-projects-path
   $ ng new my-app
   ```
+  
 6. Navigate to the `my-app` directory:
   ```
   $ cd my-app
   ``` 
+  
 7. From the `my-app` directory, link the global `sample-library` directory to node_modules of the `my-app` directory:
   ```
   $ npm link sample-library
   ```
+  
 8. Import `SampleModule` in your Angular application:
 
   ```typescript
