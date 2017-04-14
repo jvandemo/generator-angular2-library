@@ -18,7 +18,7 @@ More specifically, this generator:
 - creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
 - creates the main library file, a sample directive, a sample component, a sample service and a sample pipe
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
-- creates and configures build scripts to generate type definitions and metadata files to make library ready for AOT compilation
+- creates and configures build scripts to generate a Flat ES Module (FESM), type definitions and metadata files for your library to make it ready for AOT compilation
 
 This generator is built for Angular version 2 and above, hence the name generator-angular2-library. If you are looking for a similar generator for AngularJS 1.x, please visit [generator-angularjs-library](https://github.com/jvandemo/generator-angularjs-library).
 
