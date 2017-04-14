@@ -314,6 +314,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v8.1.0
+
+- Remove prepublish script
+
 ### v8.0.0
 
 - Update build process
