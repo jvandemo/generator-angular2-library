@@ -2,11 +2,10 @@
   "name": "<%= props.libraryName.kebabCase %>",
   "version": "0.1.0",
   "scripts": {
-    "build": "ngc -p tsconfig.json",
+    "build": "./build.sh",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "tsc && karma start",
-    "prepublish": "tsc",
-    "tsc": "tsc"
+    "prepublish": "echo \"Publish aborted: please run 'npm publish' from the dist directory\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,9 +21,6 @@
   "license": "MIT",
   "bugs": {
     "url": "<%= props.gitRepositoryUrl %>/issues"
-  },
-  "main": "./dist/index.js",
-  "dependencies": {
   },
   "devDependencies": {
     "@angular/common": "^4.0.0",
@@ -42,10 +38,11 @@
     "karma": "~1.4.1",
     "karma-chrome-launcher": "~2.0.0",
     "karma-cli": "~1.0.1",
+    "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
-    "karma-coverage-istanbul-reporter": "^0.2.0",
     "protractor": "~5.1.0",
+    "rollup": "^0.41.6",
     "rxjs": "^5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",

@@ -5,17 +5,20 @@
 
 If you want to create an Angular library with directives, services and/or pipes, then this generator is just what you need.
 
-The generator:
+This generator aligns with the [official Angular Package Format](https://goo.gl/AMOU5G) and automatically generates a [Flat ES Module](http://angularjs.blogspot.be/2017/03/angular-400-now-available.html), a single metadata.json and type definitions to make your library ready for AOT compilation by the consuming Angular application.
 
-- creates and configures `package.json` for your library
-- creates and configures `tsconfig.json` for your library
-- creates and configures `tslint.json` for your library
+Watch [Jason Aden's talk](https://www.youtube.com/watch?v=unICbsPGFIA) to learn more about the Angular Package Format.
+
+More specifically, this generator:
+
+- creates and configures `package.json` for the development of your library
+- creates and configures a second `package.json` for the distribution of your library
+- creates and configures `tsconfig.json` for your editor during development
+- creates and configures `tslint.json` for linting purposes
 - creates and configures `.gitignore`, `.npmignore` and `.travis.yml`
-- creates the main library file
-- creates a sample directive, component, service and pipe
-- creates a default export for future compatibility with angular cli, see this [discussion for more](https://github.com/angular/angular-cli/issues/96)
+- creates the main library file, a sample directive, a sample component, a sample service and a sample pipe
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
-- supports [@types](https://www.npmjs.com/~types)
+- creates and configures build scripts to generate type definitions and metadata files to make library ready for AOT compilation
 
 This generator is built for Angular version 2 and above, hence the name generator-angular2-library. If you are looking for a similar generator for AngularJS 1.x, please visit [generator-angularjs-library](https://github.com/jvandemo/generator-angularjs-library).
 
@@ -57,32 +60,63 @@ and create the following files for you:
 ```bash
 .
 ├── README.MD
-├── index.ts
+├── build.sh
 ├── package.json
 ├── src
+│   ├── index.ts
+│   ├── package.json
 │   ├── sample.component.ts
 │   ├── sample.directive.ts
 │   ├── sample.pipe.ts
-│   └── sample.service.ts
+│   ├── sample.service.ts
+│   └── tsconfig.es5.json
 ├── tsconfig.json
-├── tslint.json
-└── typings.json
+└── tslint.json
 ```
 
 You can then add or edit `*.ts` files in the `src/` directory and run:
 
 ```bash
-$ npm run tsc
+$ npm run build
 ```
 
-to automatically create all `*.js`, `*.js.map` and `*.d.ts` files in the `dist/` directory.
+to automatically create all `*.js`, `*.d.ts` and `*.metadata.json` files in the `dist/` directory.
 
-## Tslint
+## Linting your code
 
 Everything comes pre-configured with tslint and codelyzer support. To lint your code:
 
 ```bash
 $ npm run lint
+```
+
+## Building your library
+
+From the root of your library directory, run:
+
+```bash
+$ npm run build
+```
+
+This will generate a `dist` directory with:
+
+- a `package.json` file specifically for distribution with Angular listed in the `peerDependencies`
+- `sample-library.js`: a Flat ES Module (FESM) file that contains all your library code in a single file
+- `*.d.ts`: type definitions for you library
+- `sample-library.metadata.json`: metadata for your library to support AOT compilation 
+
+## Publishing your library to NPM
+
+To publish your library to NPM, first generate the `dist` directory:
+
+```bash
+$ npm run build
+```
+
+and then publish the contents of the `dist` directory to NPM:
+
+```bash
+$ npm publish dist
 ```
 
 ## Consuming your library
@@ -170,11 +204,12 @@ To consume your library before you publish it to npm, you can follow the followi
   
 3. Compile your library files:
   ```
-  $ npm run tsc
+  $ npm run build
   ```
   
-4. From the `sample-library` directory, create a symlink in the global node_modules directory to this library:
+4. From the `sample-library/dist` directory, create a symlink in the global node_modules directory to the `dist` directory of your library:
   ```
+  $ cd dist
   $ npm link
   ```
   
@@ -254,10 +289,9 @@ To consume your library before you publish it to npm, you can follow the followi
   
 10. When you make a change to your library, recompile your library files again from your `sample-library` directory:
   ```
-  $ npm run tsc
-  ```  
+  $ npm run build
+  ```
   
-
 ## To do
 
 - Create process for running unit tests
@@ -279,6 +313,11 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v8.0.0
+
+- Update build process
+- Add support for AOT compilation
 
 ### v7.0.0
 

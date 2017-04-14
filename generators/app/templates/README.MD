@@ -55,10 +55,10 @@ Once your library is imported, you can use its components, directives and pipes 
 
 ## Development
 
-To generate all `*.js`, `*.js.map` and `*.d.ts` files:
+To generate all `*.js`, `*.d.ts` and `*.metadata.json` files:
 
 ```bash
-$ npm run tsc
+$ npm run build
 ```
 
 To lint all `*.ts` files:

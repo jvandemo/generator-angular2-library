@@ -101,12 +101,6 @@ module.exports = class extends Generator {
       this.destinationPath('.travis.yml')
     );
 
-    // Copy src folder
-    this.fs.copy(
-      this.templatePath('src/**/*'),
-      this.destinationPath('src')
-    );
-
     // Copy tsconfig.json
     this.fs.copyTpl(
       this.templatePath('_tsconfig.json'),
@@ -143,10 +137,34 @@ module.exports = class extends Generator {
       }
     );
 
-    // Copy index.ts
+    // Copy build.sh
     this.fs.copyTpl(
-      this.templatePath('index.ts'),
-      this.destinationPath('index.ts'),
+      this.templatePath('build.sh'),
+      this.destinationPath('build.sh'),
+      {
+        props: this.props
+      }
+    );
+
+    // Copy src folder
+    this.fs.copy(
+      this.templatePath('src/**/*.ts'),
+      this.destinationPath('src')
+    );
+
+    // Copy src/package.json
+    this.fs.copyTpl(
+      this.templatePath('src/_package.json'),
+      this.destinationPath('src/package.json'),
+      {
+        props: this.props
+      }
+    );
+
+    // Copy src/tsconfig.es5.json
+    this.fs.copyTpl(
+      this.templatePath('src/_tsconfig.es5.json'),
+      this.destinationPath('src/tsconfig.es5.json'),
       {
         props: this.props
       }
