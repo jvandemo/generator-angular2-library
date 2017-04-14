@@ -4,8 +4,7 @@
   "scripts": {
     "build": "./build.sh",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
-    "test": "tsc && karma start",
-    "prepublish": "echo \"Publish aborted: please run 'npm publish' from the dist directory\" && exit 1"
+    "test": "tsc && karma start"
   },
   "repository": {
     "type": "git",
