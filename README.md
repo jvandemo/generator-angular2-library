@@ -319,6 +319,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v8.2.0
+
+- Added build:watch script
+- Added dist folder to gitignore
+
 ### v8.1.0
 
 - Remove prepublish script
