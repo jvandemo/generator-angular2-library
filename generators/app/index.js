@@ -146,6 +146,15 @@ module.exports = class extends Generator {
       }
     );
 
+    // Copy watch.js
+    this.fs.copyTpl(
+      this.templatePath('watch.js'),
+      this.destinationPath('watch.js'),
+      {
+        props: this.props
+      }
+    );
+
     // Copy src folder
     this.fs.copy(
       this.templatePath('src/**/*.ts'),

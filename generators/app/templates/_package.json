@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "scripts": {
     "build": "./build.sh",
+    "build:watch": "node ./watch.js",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "tsc && karma start"
   },
@@ -40,6 +41,7 @@
     "karma-coverage-istanbul-reporter": "^0.2.0",
     "karma-jasmine": "~1.1.0",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "node-watch": "^0.5.2",
     "protractor": "~5.1.0",
     "rollup": "^0.41.6",
     "rxjs": "^5.1.0",

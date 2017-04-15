@@ -291,6 +291,11 @@ To consume your library before you publish it to npm, you can follow the followi
   ```
   $ npm run build
   ```
+    
+11. If you want to automatically recompile the library files when a file in `src` changes, run
+  ```
+  $ npm run build:watch
+  ```
   
 ## To do
 
