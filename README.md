@@ -319,6 +319,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v8.2.1
+
+- Updated TypeScript files in gitignore
+
 ### v8.2.0
 
 - Added build:watch script
