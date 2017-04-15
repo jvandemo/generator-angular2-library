@@ -1,3 +1,4 @@
+/* eslint-disable */
 const watch = require('node-watch');
 const spawn = require('child_process').spawn;
 const path = require('path');
