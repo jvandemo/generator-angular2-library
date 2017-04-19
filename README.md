@@ -26,7 +26,7 @@ This generator is built for Angular version 2 and above, hence the name generato
 
 ## Quick start
 
-![generator-angular2-library-demo](https://cloud.githubusercontent.com/assets/1859381/24452029/a3c93034-1481-11e7-8006-d6eb6f94ed20.gif)
+![generator-angular2-library-demo](https://cloud.githubusercontent.com/assets/1859381/25176405/4d7dc2e8-24fe-11e7-8126-a5667ca91de5.gif)
 
 First, install [Yeoman](http://yeoman.io) and generator-angular2-library using [npm](https://www.npmjs.com/) (assuming you already have [node.js](https://nodejs.org/) pre-installed).
 
