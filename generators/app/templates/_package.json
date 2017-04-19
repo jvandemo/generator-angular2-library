@@ -2,8 +2,8 @@
   "name": "<%= props.libraryName.kebabCase %>",
   "version": "0.1.0",
   "scripts": {
-    "build": "./build.sh",
-    "build:watch": "node ./watch.js",
+    "build": "gulp build",
+    "build:watch": "gulp",
     "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
     "test": "tsc && karma start"
   },
@@ -33,6 +33,9 @@
     "@types/node": "~6.0.60",
     "codelyzer": "~2.0.0",
     "core-js": "^2.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-rollup": "^2.11.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
     "karma": "~1.4.1",
@@ -44,6 +47,7 @@
     "node-watch": "^0.5.2",
     "protractor": "~5.1.0",
     "rollup": "^0.41.6",
+    "run-sequence": "^1.2.2",
     "rxjs": "^5.1.0",
     "ts-node": "~2.0.0",
     "tslint": "~4.5.0",

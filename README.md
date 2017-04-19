@@ -19,6 +19,8 @@ More specifically, this generator:
 - creates the main library file, a sample directive, a sample component, a sample service and a sample pipe
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
 - creates and configures build scripts to generate a Flat ES Module (FESM), type definitions and metadata files for your library to make it ready for AOT compilation
+- inlines templates automatically for you so you can use external HTML templates
+- inlines styles automatically for you so you can use external CSS templates
 
 This generator is built for Angular version 2 and above, hence the name generator-angular2-library. If you are looking for a similar generator for AngularJS 1.x, please visit [generator-angularjs-library](https://github.com/jvandemo/generator-angularjs-library).
 
@@ -318,6 +320,12 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v9.0.0
+
+- Added Gulp for support on Mac, Linux and Windows (Credits to [Carlos Roso](https://github.com/caroso1222))
+- Added template inlining (Credits to [Filipe Silva](https://github.com/filipesilva))
+- Added style inlining (Credits to [Filipe Silva](https://github.com/filipesilva))
 
 ### v8.2.1
 

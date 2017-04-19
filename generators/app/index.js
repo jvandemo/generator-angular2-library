@@ -137,19 +137,16 @@ module.exports = class extends Generator {
       }
     );
 
-    // Copy build.sh
+    // Copy tools directory
     this.fs.copyTpl(
-      this.templatePath('build.sh'),
-      this.destinationPath('build.sh'),
-      {
-        props: this.props
-      }
+      this.templatePath('tools/**/*'),
+      this.destinationPath('tools')
     );
 
-    // Copy watch.js
+    // Copy gulpfile.js
     this.fs.copyTpl(
-      this.templatePath('watch.js'),
-      this.destinationPath('watch.js'),
+      this.templatePath('gulpfile.js'),
+      this.destinationPath('gulpfile.js'),
       {
         props: this.props
       }
