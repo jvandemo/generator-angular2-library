@@ -315,7 +315,7 @@ and then also update `flatModuleId` in `src/tsconfig.es5.json` accordingly:
 "flatModuleId": "@scope/library-name"
 ```
 
-See [#75](issues/75) for more information.
+See [#75](https://github.com/jvandemo/generator-angular2-library/issues/75) for more information.
 
 ## To do
 
