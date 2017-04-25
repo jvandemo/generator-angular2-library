@@ -299,6 +299,24 @@ To consume your library before you publish it to npm, you can follow the followi
   $ npm run build:watch
   ```
   
+## Frequently asked questions
+
+#### How can I use a scoped package name?
+
+First update the package name in `src/package.json`:
+
+```javascript
+"name": "@scope/library-name"
+```
+
+and then also update `flatModuleId` in `src/tsconfig.es5.json` accordingly:
+
+```javascript
+"flatModuleId": "@scope/library-name"
+```
+
+See [#75](issues/75) for more information.
+
 ## To do
 
 - Create process for running unit tests
