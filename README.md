@@ -298,7 +298,7 @@ To consume your library before you publish it to npm, you can follow the followi
   ```
   $ npm run build:watch
   ```
-  
+   
 ## Frequently asked questions
 
 #### How can I use a scoped package name?
@@ -316,6 +316,12 @@ and then also update `flatModuleId` in `src/tsconfig.es5.json` accordingly:
 ```
 
 See [#75](https://github.com/jvandemo/generator-angular2-library/issues/75) for more information.
+
+#### How can I avoid recompilation during development
+
+If you experience issues ([#72](https://github.com/jvandemo/generator-angular2-library/issues/72)) or want to avoid constant recompilation of your library during development, you can also `npm link src` instead of `npm link dist` in step 4 of the process above.
+ 
+This will let you consume the TypeScript code directly from the `src` directory of your library instead of the generated bundle from the `dist` directory. This increases development speed if you are testing your library in a local Angular application, but remember to test the generated bundle using `npm link dist` after you finish writing your code, to ensure that your generated bundle is working as expected before you publish your library to NPM.
 
 ## To do
 
