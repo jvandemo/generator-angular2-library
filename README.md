@@ -123,6 +123,22 @@ $ npm run build:docs
 ```
 This will generate a `docs` directory with all documentation of your library.
 
+To serve your documentation, run:
+
+```bash
+$ npm run build:docs -- -s
+```
+
+and navigate your browser to `http://localhost:8080`.
+
+To automatically rebuild your documentation every time a file in the `src` directory changes, run:
+
+```bash
+$ npm run build:docs -- -s -w
+```
+ 
+For more features, check out the [compodoc website](https://compodoc.github.io/website/).
+
 ## Publishing your library to NPM
 
 To publish your library to NPM, first generate the `dist` directory:
