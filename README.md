@@ -119,14 +119,14 @@ This will generate a `dist` directory with:
 From the root of your library directory, run:
 
 ```bash
-$ npm run build:docs
+$ npm run docs:build
 ```
 This will generate a `docs` directory with all documentation of your library.
 
 To serve your documentation, run:
 
 ```bash
-$ npm run build:docs -- -s
+$ npm run docs:serve
 ```
 
 and navigate your browser to `http://localhost:8080`.
@@ -134,7 +134,7 @@ and navigate your browser to `http://localhost:8080`.
 To automatically rebuild your documentation every time a file in the `src` directory changes, run:
 
 ```bash
-$ npm run build:docs -- -s -w
+$ npm run docs:watch
 ```
  
 For more features, check out the [compodoc website](https://compodoc.github.io/website/).
@@ -376,6 +376,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v9.2.0
+
+- Added convenience scripts for generating documentation
 
 ### v9.1.0
 
