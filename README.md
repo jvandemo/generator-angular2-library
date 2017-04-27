@@ -121,7 +121,7 @@ From the root of your library directory, run:
 ```bash
 $ npm run build:docs
 ```
-This will generate a `docs` directory with all documentation of your library
+This will generate a `docs` directory with all documentation of your library.
 
 ## Publishing your library to NPM
 
@@ -360,6 +360,11 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v9.1.0
+
+- Added compodoc for generating documentation ([#76](https://github.com/jvandemo/generator-angular2-library/pull/76))
+- Removed comments from TypeScript config files to allow JSON validity checks
 
 ### v9.0.0
 
