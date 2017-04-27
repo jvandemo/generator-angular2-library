@@ -1,4 +1,3 @@
-// This file is used by ngc to create the files in the build directory
 {
   "compilerOptions": {
     "declaration": true,
@@ -16,7 +15,6 @@
       "dom"
     ],
     "skipLibCheck": true,
-    // Don't auto-discover @types/node, it results in a ///<reference in the .d.ts output
     "types": []
   },
   "angularCompilerOptions": {
