@@ -84,6 +84,13 @@ $ npm run build
 
 to automatically create all `*.js`, `*.d.ts` and `*.metadata.json` files in the `dist/` directory.
 
+## TypeScript config
+
+The generates creates 2 TypeScript config files:
+
+- `tsconfig.json` is used to configure your editor during development and is not used for building your library
+- `src/tsconfig.es5.json` is used by the Angular compiler to build the files in the `dist` directory when you run `npm run build`
+
 ## Linting your code
 
 Everything comes pre-configured with tslint and codelyzer support. To lint your code:
