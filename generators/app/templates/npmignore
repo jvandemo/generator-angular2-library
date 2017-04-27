@@ -1,7 +1,7 @@
 # Node
 node_modules/*
 npm-debug.log
-
+docs/*
 # DO NOT IGNORE TYPESCRIPT FILES FOR NPM
 # TypeScript
 # *.js

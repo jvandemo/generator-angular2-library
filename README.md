@@ -114,6 +114,15 @@ This will generate a `dist` directory with:
 - `*.d.ts`: type definitions for you library
 - `sample-library.metadata.json`: metadata for your library to support AOT compilation 
 
+## Generating documentation for your library
+
+From the root of your library directory, run:
+
+```bash
+$ npm run build:docs
+```
+This will generate a `docs` directory with all documentation of your library
+
 ## Publishing your library to NPM
 
 To publish your library to NPM, first generate the `dist` directory:
