@@ -3,6 +3,7 @@ var gulp = require('gulp'),
   path = require('path'),
   ngc = require('@angular/compiler-cli/src/main').main,
   rollup = require('gulp-rollup'),
+  rename = require('gulp-rename'),
   del = require('del'),
   runSequence = require('run-sequence'),
   inlineResources = require('./tools/gulp/inline-resources');
@@ -61,23 +62,74 @@ gulp.task('ngc', function () {
  * 5. Run rollup inside the /build folder to generate our Flat ES module and place the
  *    generated file into the /dist folder
  */
-gulp.task('rollup', function () {
+gulp.task('rollup:fesm', function () {
   return gulp.src(`${buildFolder}/**/*.js`)
   // transform the files here.
     .pipe(rollup({
-      // any option supported by Rollup can be set here.
+
+      // Bundle's entry point
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#entry
       entry: `${buildFolder}/index.js`,
+
+      // A list of IDs of modules that should remain external to the bundle
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
       external: [
         '@angular/core',
         '@angular/common'
       ],
+
+      // Format of generated bundle
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#format
       format: 'es'
     }))
     .pipe(gulp.dest(distFolder));
 });
 
 /**
- * 6. Copy all the files from /build to /dist, except .js files. We ignore all .js from /build
+ * 6. Run rollup inside the /build folder to generate our UMD module and place the
+ *    generated file into the /dist folder
+ */
+gulp.task('rollup:umd', function () {
+  return gulp.src(`${buildFolder}/**/*.js`)
+  // transform the files here.
+    .pipe(rollup({
+
+      // Bundle's entry point
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#entry
+      entry: `${buildFolder}/index.js`,
+
+      // A list of IDs of modules that should remain external to the bundle
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
+      external: [
+        '@angular/core',
+        '@angular/common'
+      ],
+
+      // Format of generated bundle
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#format
+      format: 'umd',
+
+      // Export mode to use
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#exports
+      exports: 'named',
+
+      // The name to use for the module for UMD/IIFE bundles
+      // (required for bundles with exports)
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#modulename
+      moduleName: '<%= props.libraryName.original %>',
+
+      // See https://github.com/rollup/rollup/wiki/JavaScript-API#globals
+      globals: {
+        typescript: 'ts'
+      }
+
+    }))
+    .pipe(rename('<%= props.libraryName.kebabCase %>.umd.js'))
+    .pipe(gulp.dest(distFolder));
+});
+
+/**
+ * 7. Copy all the files from /build to /dist, except .js files. We ignore all .js from /build
  *    because with don't need individual modules anymore, just the Flat ES module generated
  *    on step 5.
  */
@@ -87,7 +139,7 @@ gulp.task('copy:build', function () {
 });
 
 /**
- * 7. Copy package.json from /src to /dist
+ * 8. Copy package.json from /src to /dist
  */
 gulp.task('copy:manifest', function () {
   return gulp.src([`${srcFolder}/package.json`])
@@ -95,14 +147,14 @@ gulp.task('copy:manifest', function () {
 });
 
 /**
- * 8. Delete /.tmp folder
+ * 9. Delete /.tmp folder
  */
 gulp.task('clean:tmp', function () {
   return deleteFolders([tmpFolder]);
 });
 
 /**
- * 9. Delete /build folder
+ * 10. Delete /build folder
  */
 gulp.task('clean:build', function () {
   return deleteFolders([buildFolder]);
@@ -114,7 +166,8 @@ gulp.task('compile', function () {
     'copy:source',
     'inline-resources',
     'ngc',
-    'rollup',
+    'rollup:fesm',
+    'rollup:umd',
     'copy:build',
     'copy:manifest',
     'clean:build',

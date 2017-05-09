@@ -5,7 +5,7 @@
 
 If you want to create an Angular library with directives, services and/or pipes, then this generator is just what you need.
 
-This generator aligns with the [official Angular Package Format](https://goo.gl/AMOU5G) and automatically generates a [Flat ES Module](http://angularjs.blogspot.be/2017/03/angular-400-now-available.html), a single metadata.json and type definitions to make your library ready for AOT compilation by the consuming Angular application.
+This generator aligns with the [official Angular Package Format](https://goo.gl/AMOU5G) and automatically generates a [Flat ES Module](http://angularjs.blogspot.be/2017/03/angular-400-now-available.html), a UMD bundle, a single metadata.json and type definitions to make your library ready for AOT compilation by the consuming Angular application.
 
 Watch [Jason Aden's talk](https://www.youtube.com/watch?v=unICbsPGFIA) to learn more about the Angular Package Format.
 
@@ -19,6 +19,7 @@ More specifically, this generator:
 - creates the main library file, a sample directive, a sample component, a sample service and a sample pipe
 - configures [tslint](https://palantir.github.io/tslint/) for you with [codelyzer](https://github.com/mgechev/codelyzer) support
 - creates and configures build scripts to generate a Flat ES Module (FESM), type definitions and metadata files for your library to make it ready for AOT compilation
+- creates and configures build scripts to generate a Universal Module Definition (UMD) bundle to use your library in Node.js, SystemJS and with script tags (Plunker, Fiddle, etc)
 - inlines templates automatically for you so you can use external HTML templates
 - inlines styles automatically for you so you can use external CSS templates
 - supports .scss files
@@ -63,7 +64,7 @@ and create the following files for you:
 ```bash
 .
 ├── README.MD
-├── build.sh
+├── gulpfile.js
 ├── package.json
 ├── src
 │   ├── index.ts
@@ -83,18 +84,38 @@ You can then add or edit `*.ts` files in the `src/` directory and run:
 $ npm run build
 ```
 
-to automatically create all `*.js`, `*.d.ts` and `*.metadata.json` files in the `dist/` directory.
+to automatically create all `*.js`, `*.d.ts` and `*.metadata.json` files in the `dist` directory:
+
+```bash
+dist
+├── index.d.ts                  # Typings for AOT compilation
+├── index.js                    # Flat ES Module (FESM) for us with webpack
+├── lib.d.ts                    # Typings for AOT compilation
+├── lib.metadata.json           # Metadata for AOT compilation
+├── lib.umd.js                  # UMD bundle for use with Node.js, SystemJS or script tag
+├── package.json                # package.json for consumer of your library
+├── sample.component.d.ts       # Typings for AOT compilation
+├── sample.directive.d.ts       # Typings for AOT compilation
+├── sample.pipe.d.ts            # Typings for AOT compilation
+└── sample.service.d.ts         # Typings for AOT compilation
+```
+
+Finally you publish your library to NPM by publishing the contents of the `dist` directory:
+
+```bash
+$ npm publish dist
+```
 
 ## TypeScript config
 
-The generates creates 2 TypeScript config files:
+The generator creates 2 TypeScript config files:
 
 - `tsconfig.json` is used to configure your editor during development and is not used for building your library
 - `src/tsconfig.es5.json` is used by the Angular compiler to build the files in the `dist` directory when you run `npm run build`
 
 ## Linting your code
 
-Everything comes pre-configured with tslint and codelyzer support. To lint your code:
+Your library comes pre-configured with tslint and codelyzer support. To lint your code:
 
 ```bash
 $ npm run lint
@@ -112,6 +133,7 @@ This will generate a `dist` directory with:
 
 - a `package.json` file specifically for distribution with Angular listed in the `peerDependencies`
 - `sample-library.js`: a Flat ES Module (FESM) file that contains all your library code in a single file
+- `sample-library.umd.js`: a Universal Module Definition (UMD) bundle file that contains all your library code in UMD format for use in Node.js, SystemJS or via a script tag (e.g. in Plunker, Fiddle, etc)
 - `*.d.ts`: type definitions for you library
 - `sample-library.metadata.json`: metadata for your library to support AOT compilation 
 

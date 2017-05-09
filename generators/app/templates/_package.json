@@ -40,6 +40,7 @@
     "core-js": "^2.4.1",
     "del": "^2.2.2",
     "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
     "gulp-rollup": "^2.11.0",
     "jasmine-core": "~2.5.2",
     "jasmine-spec-reporter": "~3.2.0",
