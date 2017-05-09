@@ -380,6 +380,8 @@ then reference it in your component's `styleUrls` in `sample.component.ts` accor
 })
 ```
 
+The .scss files will automatically be compiled and inlined in your library bundle.
+
 ## To do
 
 - Create process for running unit tests
