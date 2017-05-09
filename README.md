@@ -426,6 +426,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v10.0.0
+
+- Added support for generating UMD bundle
+
 ### v9.3.0
 
 - Added support for .scss files (Credits to [Thomas Deblock](https://github.com/deblockt))
