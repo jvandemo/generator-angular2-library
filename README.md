@@ -404,7 +404,7 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ### v9.3.0
 
-- Added support for SCSS files
+- Added support for .scss files (Credits to [Thomas Deblock](https://github.com/deblockt))
 
 ### v9.2.0
 
