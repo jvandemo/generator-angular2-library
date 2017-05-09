@@ -21,6 +21,7 @@ More specifically, this generator:
 - creates and configures build scripts to generate a Flat ES Module (FESM), type definitions and metadata files for your library to make it ready for AOT compilation
 - inlines templates automatically for you so you can use external HTML templates
 - inlines styles automatically for you so you can use external CSS templates
+- supports .scss files
 
 This generator is built for Angular version 2 and above, hence the name generator-angular2-library. If you are looking for a similar generator for AngularJS 1.x, please visit [generator-angularjs-library](https://github.com/jvandemo/generator-angularjs-library).
 
@@ -355,6 +356,30 @@ If you experience issues ([#72](https://github.com/jvandemo/generator-angular2-l
  
 This will let you consume the TypeScript code directly from the `src` directory of your library instead of the generated bundle from the `dist` directory. This increases development speed if you are testing your library in a local Angular application, but remember to test the generated bundle using `npm link dist` after you finish writing your code, to ensure that your generated bundle is working as expected before you publish your library to NPM.
 
+#### How can I use .scss files?
+
+Simply store your styles in a file with a filename extension of `scss` and reference it in your component's `styleUrls` property.
+
+So if you have a `sample.component.scss`:
+
+```scss
+h1 {
+  color: red;
+}
+```
+ 
+then reference it in your component's `styleUrls` in `sample.component.ts` accordingly:
+
+```typescript
+@Component({
+  selector: 'sample-component',
+  template: `<h1>Sample component</h1>`,
+  styleUrls: [
+    'sample.component.scss'
+  ]
+})
+```
+
 ## To do
 
 - Create process for running unit tests
@@ -376,6 +401,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v9.3.0
+
+- Added support for SCSS files
 
 ### v9.2.0
 
