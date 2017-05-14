@@ -426,6 +426,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v10.1.0
+
+- Copy README to dist directory ([#85](https://github.com/jvandemo/generator-angular2-library/pull/85)) (Credits to [David](https://github.com/dbfannin))
+
 ### v10.0.0
 
 - Added support for generating UMD bundle
