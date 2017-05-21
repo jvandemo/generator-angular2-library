@@ -203,7 +203,7 @@ import { SampleModule } from 'sample-library';
     BrowserModule,
     
     // Specify your library as an import
-    SampleModule
+    SampleModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
@@ -305,7 +305,7 @@ To consume your library before you publish it to npm, you can follow the followi
       BrowserModule,
       
       // Specify your library as an import
-      SampleModule
+      SampleModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
