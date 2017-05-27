@@ -6,6 +6,7 @@ const fs = require('fs');
 const path = require('path');
 const glob = require('glob');
 const sass = require('node-sass');
+const tildeImporter = require('node-sass-tilde-importer');
 
 /**
  * Simple Promiseify function that takes a Node API and return a version that supports promises.
@@ -121,7 +122,11 @@ function inlineStyle(content, urlResolver) {
  */
 function buildSass(content, sourceFile) {
   try {
-    const result = sass.renderSync({data: content});
+    const result = sass.renderSync({
+      data: content,
+      file: sourceFile,
+      importer: tildeImporter
+    });
     return result.css.toString()
   } catch (e) {
     console.error('\x1b[41m');
