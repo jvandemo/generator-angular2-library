@@ -71,6 +71,12 @@ gulp.task('rollup:fesm', function () {
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#entry
       entry: `${buildFolder}/index.js`,
 
+      // Allow mixing of hypothetical and actual files. "Actual" files can be files
+      // accessed by Rollup or produced by plugins further down the chain.
+      // This prevents errors like: 'path/file' does not exist in the hypothetical file system
+      // when subdirectories are used in the `src` directory.
+      allowRealFiles: true,
+
       // A list of IDs of modules that should remain external to the bundle
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
       external: [
@@ -97,6 +103,12 @@ gulp.task('rollup:umd', function () {
       // Bundle's entry point
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#entry
       entry: `${buildFolder}/index.js`,
+
+      // Allow mixing of hypothetical and actual files. "Actual" files can be files
+      // accessed by Rollup or produced by plugins further down the chain.
+      // This prevents errors like: 'path/file' does not exist in the hypothetical file system
+      // when subdirectories are used in the `src` directory.
+      allowRealFiles: true,
 
       // A list of IDs of modules that should remain external to the bundle
       // See https://github.com/rollup/rollup/wiki/JavaScript-API#external
