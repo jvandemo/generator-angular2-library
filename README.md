@@ -440,6 +440,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v10.2.1
+
+- Allow real files in rollup to fix [#105](https://github.com/jvandemo/generator-angular2-library/issues/105)
+
 ### v10.2.0
 
 - Add support for scss imports ([#100](https://github.com/jvandemo/generator-angular2-library/pull/100))(Credits to [rtrompier](https://github.com/rtrompier))
