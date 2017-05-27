@@ -18,7 +18,10 @@ const distFolder = path.join(rootFolder, 'dist');
  * 1. Delete /dist folder
  */
 gulp.task('clean:dist', function () {
-  return deleteFolders([distFolder]);
+
+  // Delete contents but not dist folder to avoid broken npm links
+  // when dist directory is removed while npm link references it.
+  return deleteFolders([distFolder + '/**', '!' + distFolder]);
 });
 
 /**
