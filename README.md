@@ -404,6 +404,20 @@ then reference it in your component's `styleUrls` in `sample.component.ts` accor
 
 The .scss files will automatically be compiled and inlined in your library bundle.
 
+#### How can I import .scss files
+
+To import a .scss file in an existing .scss file, you can specify a relative path:
+
+```
+@import '../relative/path/to/other.scss';
+```
+
+or use a tilde to import a file from the nearest parent `node_modules` directory:
+
+```
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+```
+
 ## To do
 
 - Create process for running unit tests
@@ -425,6 +439,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v10.2.0
+
+- Add support for scss imports ([#100](https://github.com/jvandemo/generator-angular2-library/pull/100))(Credits to [rtrompier](https://github.com/rtrompier))
 
 ### v10.1.1
 
