@@ -440,6 +440,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v10.2.2
+
+- Avoid deletion of dist directory to prevent npm link errors (See [#91](https://github.com/jvandemo/generator-angular2-library/issues/91)) (Credits to [Filipe Silva](https://github.com/filipesilva) and [Brenden Niedermeyer](https://github.com/bniedermeyer))
+
 ### v10.2.1
 
 - Allow real files in rollup to fix [#105](https://github.com/jvandemo/generator-angular2-library/issues/105)
