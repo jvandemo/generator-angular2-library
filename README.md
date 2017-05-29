@@ -418,6 +418,15 @@ or use a tilde to import a file from the nearest parent `node_modules` directory
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 ```
 
+#### How can I update my generator to the latest version?
+
+From the command line, run
+
+```bash
+$ yo
+```
+and select the option *Update your generators*.
+
 ## To do
 
 - Create process for running unit tests
