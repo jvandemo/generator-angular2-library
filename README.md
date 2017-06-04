@@ -353,6 +353,21 @@ To consume your library before you publish it to npm, you can follow the followi
   ```
   $ npm run build:watch
   ```
+  
+12. If you are using an Angular CLI application to consume your library, make sure to set up a [path mapping](https://github.com/angular/angular-cli/wiki/stories-linked-library#use-typesscript-path-mapping-for-peer-dependencies) in `/src/tsconfig.app.json` of your consuming application (not your library):
+  ```typescript
+  {
+    "compilerOptions": {
+      // ...
+      // Note: these paths are relative to `baseUrl` path.
+      "paths": {
+        "@angular/*": [
+          "../node_modules/@angular/*"
+        ]
+      }
+    }
+  }
+  ```
    
 ## Frequently asked questions
 
