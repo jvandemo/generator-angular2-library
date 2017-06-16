@@ -371,6 +371,14 @@ To consume your library before you publish it to npm, you can follow the followi
    
 ## Frequently asked questions
 
+#### How can I configure Karma?
+
+Currently, the generator does not create a custom Karma configuration for running unit tests.
+
+If your library requires a custom Karma setup, please check out [this tutorial on how to configure Karma for your libraray](https://github.com/raphael-volt/ng2-testable-lib) (Credits to [Raphael](https://github.com/raphael-volt)).
+
+As soon as official recommendations are available on how to set up Karma for testing libraries, this generator will be updated accordingly.
+
 #### How can I use a scoped package name?
 
 First update the package name in `src/package.json`:
