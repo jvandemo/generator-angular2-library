@@ -469,6 +469,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v11.0.0
+
+- Added support for [Jest](https://facebook.github.io/jest/) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+- Updated Compodoc (Credits to [Artem Kuznetsov](https://github.com/artemsky))
+
 ### v10.2.2
 
 - Avoid deletion of dist directory to prevent npm link errors (See [#91](https://github.com/jvandemo/generator-angular2-library/issues/91)) (Credits to [Filipe Silva](https://github.com/filipesilva) and [Brenden Niedermeyer](https://github.com/bniedermeyer))
