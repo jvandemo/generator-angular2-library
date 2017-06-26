@@ -58,6 +58,15 @@ module.exports = class extends Generator {
         message: 'Git repository url',
         default: 'https://github.com/username/repo',
         store: true
+      },
+      {
+        type: 'list',
+        name: 'testFramework',
+        message: 'Test framework',
+        choices: [
+          'karma + jasmine',
+          'jest'
+        ]
       }
     ];
 
@@ -75,7 +84,9 @@ module.exports = class extends Generator {
           kebabCase: props.libraryName
         },
 
-        gitRepositoryUrl: props.gitRepositoryUrl
+        gitRepositoryUrl: props.gitRepositoryUrl,
+
+        testFramework: props.testFramework
       };
 
     });
@@ -120,13 +131,33 @@ module.exports = class extends Generator {
     );
 
     // Copy package.json
-    this.fs.copyTpl(
+    if (this.props.testFramework === 'jest') {
+      this.fs.copyTpl(
+      this.templatePath('_package_jest.json'),
+        this.destinationPath('package.json'),
+        {
+          props: this.props
+        }
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('_jest.ts'),
+        this.destinationPath('src/jest.ts')
+      );
+
+      this.fs.copyTpl(
+        this.templatePath('_jest-global-mocks.ts'),
+        this.destinationPath('src/jest-global-mocks.ts')
+      );
+    } else {
+      this.fs.copyTpl(
       this.templatePath('_package.json'),
-      this.destinationPath('package.json'),
-      {
-        props: this.props
-      }
-    );
+        this.destinationPath('package.json'),
+        {
+          props: this.props
+        }
+      );
+    }
 
     // Copy README
     this.fs.copyTpl(
@@ -174,6 +205,12 @@ module.exports = class extends Generator {
       {
         props: this.props
       }
+    );
+
+    // Copy src/tsconfig.spec.json
+    this.fs.copyTpl(
+      this.templatePath('src/_tsconfig.spec.json'),
+      this.destinationPath('src/tsconfig.spec.json')
     );
   }
 

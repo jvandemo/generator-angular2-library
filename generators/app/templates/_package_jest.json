@@ -1,0 +1,71 @@
+{
+  "name": "<%= props.libraryName.kebabCase %>",
+  "version": "0.1.0",
+  "scripts": {
+    "build": "gulp build",
+    "build:watch": "gulp",
+    "docs": "npm run docs:build",
+    "docs:build": "compodoc -p tsconfig.json -n <%= props.libraryName.original %> -d docs --hideGenerator",
+    "docs:serve": "npm run docs:build -- -s",
+    "docs:watch": "npm run docs:build -- -s -w",
+    "lint": "tslint --type-check --project tsconfig.json src/**/*.ts",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:ci": "jest --runInBand"
+  },
+  "jest": {
+    "preset": "jest-preset-angular",
+    "setupTestFrameworkScriptFile": "<rootDir>/src/jest.ts",
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "collectCoverageFrom" : ["src/**/*.ts", "!**/node_modules/**"],
+    "coverageReporters": ["json", "lcov"]
+  },
+  "repository": {
+    "type": "git",
+    "url": "<%= props.gitRepositoryUrl %>"
+  },
+  "author": {
+    "name": "<%= props.author.name %>",
+    "email": "<%= props.author.email %>"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "<%= props.gitRepositoryUrl %>/issues"
+  },
+  "devDependencies": {
+    "@angular/common": "^4.0.0",
+    "@angular/compiler": "^4.0.0",
+    "@angular/compiler-cli": "^4.0.0",
+    "@angular/core": "^4.0.0",
+    "@angular/platform-browser": "^4.0.0",
+    "@angular/platform-browser-dynamic": "^4.0.0",
+    "@compodoc/compodoc": "^1.0.0-beta.7",
+    "@types/node": "~6.0.60",
+    "@types/jest": "^19.2.3",
+    "codelyzer": "~2.0.0",
+    "core-js": "^2.4.1",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-rollup": "^2.11.0",
+    "jest": "^20.0.3",
+    "jest-preset-angular": "^2.0.2",
+    "node-sass": "^4.5.2",
+    "node-watch": "^0.5.2",
+    "protractor": "~5.1.0",
+    "rollup": "^0.41.6",
+    "run-sequence": "^1.2.2",
+    "rxjs": "^5.1.0",
+    "ts-node": "~2.0.0",
+    "tslint": "~4.5.0",
+    "typescript": "~2.2.0",
+    "zone.js": "^0.8.4"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}

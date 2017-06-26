@@ -23,6 +23,7 @@ More specifically, this generator:
 - inlines templates automatically for you so you can use external HTML templates
 - inlines styles automatically for you so you can use external CSS templates
 - supports .scss files
+- supports unit tests and code coverage using [jest](https://facebook.github.io/jest/)
 
 This generator is built for Angular version 2 and above, hence the name generator-angular2-library. If you are looking for a similar generator for AngularJS 1.x, please visit [generator-angularjs-library](https://github.com/jvandemo/generator-angularjs-library).
 
@@ -449,10 +450,6 @@ From the command line, run
 $ yo
 ```
 and select the option *Update your generators*.
-
-## To do
-
-- Create process for running unit tests
 
 ## Issues
 
