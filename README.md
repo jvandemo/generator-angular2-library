@@ -469,6 +469,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v11.0.2
+
+- Fixed package.json for [Jest](https://facebook.github.io/jest/) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+
 ### v11.0.1
 
 - Updated `styleUrls` to fix [#140](https://github.com/jvandemo/generator-angular2-library/issues/140)
