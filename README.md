@@ -487,6 +487,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v11.0.3
+
+- Added FAQ on how to add third party library
+- Updated jest support (See [#91](https://github.com/jvandemo/generator-angular2-library/pull/158)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+
 ### v11.0.2
 
 - Fixed package.json for [Jest](https://facebook.github.io/jest/) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
