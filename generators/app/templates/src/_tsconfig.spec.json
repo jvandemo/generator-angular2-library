@@ -1,6 +1,8 @@
 {
   "extends": "./tsconfig.es5.json",
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "outDir": "../out-tsc/spec",
     "module": "commonjs",
     "target": "es6",
