@@ -451,6 +451,24 @@ $ yo
 ```
 and select the option *Update your generators*.
 
+#### What if my library depends on a third party library?
+
+If your library depends on a third party library such as Angular Material, you don't have to include the third party library in your library.
+
+Instead, you should add the third party library as a peer dependency to the `peerDependencies` property in `src/package.json` of your library:
+
+```javascript
+"peerDependencies": {
+  "@angular/core": "^4.0.0",
+  "rxjs": "^5.1.0",
+  "zone.js": "^0.8.4"
+}
+```
+
+This causes a warning to be displayed when the consuming application runs `npm install` and does not have the third party library installed that your library depends on.
+
+The generator already adds `@angular/core`, `rxjs` and `zone.js` as peer dependencies for you by default.
+
 ## Issues
 
 Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
