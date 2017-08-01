@@ -487,6 +487,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v11.1.0
+
+- Added `main` and `jsnext:main` properties to package.json
+
 ### v11.0.3
 
 - Added FAQ on how to add third party library
