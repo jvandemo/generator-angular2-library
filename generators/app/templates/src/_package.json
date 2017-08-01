@@ -16,7 +16,9 @@
   "bugs": {
     "url": "<%= props.gitRepositoryUrl %>/issues"
   },
+  "main": "<%= props.libraryName.kebabCase %>.umd.js",
   "module": "<%= props.libraryName.kebabCase %>.js",
+  "jsnext:main": "<%= props.libraryName.kebabCase %>.js",
   "typings": "<%= props.libraryName.kebabCase %>.d.ts",
   "peerDependencies": {
     "@angular/core": "^4.0.0",
