@@ -453,7 +453,7 @@ and select the option *Update your generators*.
 
 #### What if my library depends on a third party library?
 
-If your library depends on a third party library such as Angular Material, you don't have to include the third party library in your library.
+If your library depends on a third party library such as Angular Material or PrimeNG, you don't have to include the third party library in your library.
 
 Instead, you should add the third party library as a peer dependency to the `peerDependencies` property in `src/package.json` of your library:
 
@@ -468,6 +468,24 @@ Instead, you should add the third party library as a peer dependency to the `pee
 This causes a warning to be displayed when the consuming application runs `npm install` and does not have the third party library installed that your library depends on.
 
 The generator already adds `@angular/core`, `rxjs` and `zone.js` as peer dependencies for you by default.
+
+Consider the following scenario where your library depends on a third party library called "PrimeNG".
+
+In your Angular library:
+
+1. run `npm install primeng --save` to install PrimeNG and add it as a devDependency to `package.json` in the root directory
+2. add PrimeNG as a peerDependency in `src/package.json`, *NOT* as dependency or devDependency (`src/package.json` is the package.json that is distributed with your library, so you must specify primeng as peer dependency here, *NOT* in the package.json file in the root of your library)
+3. import the necessary PrimeNG Angular module(s) in your library Angular module
+4. write code that uses PrimeNG components
+5. build your library and publish it (or link it locally)
+
+In the consuming Angular application
+
+1. run `npm install yourlibrary` to install your library (which should display a warning if PrimeNG is not installed) or link it locally
+2. run `npm install primeng` to install PrimeNG if it is not installed yet
+3. import the necessary PrimeNG Angular module(s) in your Angular application module (usually `AppModule`) (this step is not needed if your library exports the PrimeNG module(s) in its module metadata)
+4. import your library module in your Angular application module (usually `AppModule`)
+5. you can now use your library components
 
 ## Issues
 
