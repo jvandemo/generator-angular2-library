@@ -487,6 +487,14 @@ In the consuming Angular application
 4. import your library module in your Angular application module (usually `AppModule`)
 5. you can now use your library components
 
+#### How can I see which version of the generator I have installed
+
+From the command line, run:
+
+```
+$ npm ls -g --depth=1 2>/dev/null | grep generator-
+```
+
 ## Issues
 
 Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
