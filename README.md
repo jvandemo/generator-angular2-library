@@ -369,6 +369,16 @@ To consume your library before you publish it to npm, you can follow the followi
     }
   }
   ```
+  
+When you npm link a library with peer dependencies, the [consuming application searches for the peer dependencies in the library's parent directories instead of the application's parent directories](http://codetunnel.io/you-can-finally-npm-link-packages-that-contain-peer-dependencies).
+
+If you get `Error: Unexpected value '[object Object]' imported by the module 'AppModule'. Please add a @NgModule annotation.`, then try:
+
+```
+$ ng serve --preserve-symlinks
+```
+
+to make sure the consuming application searches for the peer dependencies in the application's node_modules directory.  
    
 ## Frequently asked questions
 
