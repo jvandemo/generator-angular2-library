@@ -90,7 +90,7 @@ to automatically create all `*.js`, `*.d.ts` and `*.metadata.json` files in the 
 ```bash
 dist
 ├── index.d.ts                  # Typings for AOT compilation
-├── index.js                    # Flat ES Module (FESM) for us with webpack
+├── index.js                    # Flat ES Module (FESM) for use with webpack
 ├── lib.d.ts                    # Typings for AOT compilation
 ├── lib.metadata.json           # Metadata for AOT compilation
 ├── lib.umd.js                  # UMD bundle for use with Node.js, SystemJS or script tag
