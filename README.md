@@ -452,6 +452,14 @@ or use a tilde to import a file from the nearest parent `node_modules` directory
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 ```
 
+#### How can I see which version of the generator I have installed
+
+From the command line, run:
+
+```
+$ npm ls -g --depth=1 2>/dev/null | grep generator-
+```
+
 #### How can I update my generator to the latest version?
 
 From the command line, run
@@ -497,13 +505,7 @@ In the consuming Angular application
 4. import your library module in your Angular application module (usually `AppModule`)
 5. you can now use your library components
 
-#### How can I see which version of the generator I have installed
-
-From the command line, run:
-
-```
-$ npm ls -g --depth=1 2>/dev/null | grep generator-
-```
+To see a fully documented example, check out [this guide](./guides/import_non_angular_libraries.md).
 
 ## Issues
 
@@ -522,6 +524,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v11.2.0
+
+- Added guide on how depend on third party library (See [#172](https://github.com/jvandemo/generator-angular2-library/pull/172)) (Credits to [Ka Tam](https://github.com/kktam))
 
 ### v11.1.0
 
