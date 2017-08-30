@@ -1,3 +1,6 @@
+Last updated: 2017-08-16
+Written by: [Ka Tam](https://github.com/kktam)
+
 ## generator-angular-2-library help guide
 
 ## How to import non Angular libraries into your own project
