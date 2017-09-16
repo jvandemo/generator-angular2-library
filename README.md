@@ -245,9 +245,21 @@ export class HomeComponent {
 
 To learn more about Angular Dependency Injection, check out the [Official Angular Documentation](https://angular.io/docs/ts/latest/cookbook/dependency-injection.html).
 
-## Consuming your library during development
+## Preview your library during development
 
-To consume your library before you publish it to npm, you can follow the following steps:
+To preview your library code during development, start the playground:
+
+```bash
+$ npm run playground
+```
+
+Changes to your library code will be updated live in the browser window:
+
+![playground](https://user-images.githubusercontent.com/1859381/30514111-576fcf4e-9b0f-11e7-837d-169d08667c2c.gif)
+
+## Consuming your library in a local application during development
+
+To consume your library in a local application before you publish it to npm, you can follow the following steps:
 
 1. Create your library:
   ```
@@ -524,6 +536,10 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v11.3.0
+
+- Added playground (See [#172](https://github.com/jvandemo/generator-angular2-library/pull/146)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
 
 ### v11.2.0
 
