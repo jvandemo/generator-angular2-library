@@ -3,6 +3,7 @@ const chalk = require('chalk');
 const yosay = require('yosay');
 const underscoreString = require('underscore.string');
 const Generator = require('yeoman-generator');
+const setupPlaygorund = require('./playground');
 
 module.exports = class extends Generator {
 
@@ -212,6 +213,8 @@ module.exports = class extends Generator {
       this.templatePath('src/_tsconfig.spec.json'),
       this.destinationPath('src/tsconfig.spec.json')
     );
+
+    setupPlaygorund(this);
   }
 
   install() {
