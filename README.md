@@ -537,9 +537,13 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v11.4.0
+
+- Updated rollup and gulp-rollup configuration (See [#190](https://github.com/jvandemo/generator-angular2-library/pull/190)) (Credits to [Daniel Geri](https://github.com/danielgeri))
+
 ### v11.3.0
 
-- Added playground (See [#172](https://github.com/jvandemo/generator-angular2-library/pull/146)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+- Added playground (See [#146](https://github.com/jvandemo/generator-angular2-library/pull/146)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
 
 ### v11.2.0
 
