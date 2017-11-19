@@ -9,8 +9,9 @@ This generator aligns with the [official Angular Package Format](https://goo.gl/
 
 Watch [Jason Aden's talk](https://www.youtube.com/watch?v=unICbsPGFIA) to learn more about the Angular Package Format.
 
-More specifically, this generator:
+More specifically, the latest version of this generator:
 
+- supports Angular 5
 - creates and configures `package.json` for the development of your library
 - creates and configures a second `package.json` for the distribution of your library
 - creates and configures `tsconfig.json` for your editor during development
@@ -519,6 +520,24 @@ In the consuming Angular application
 
 To see a fully documented example, check out [this guide](./guides/import_non_angular_libraries.md).
 
+#### How can I upgrade my library to support Angular 5
+
+Version 12 or later of this generator supports Angular 5.
+
+If you have an existing library that was generated with an earlier version of this generator:
+
+1. update the versions of the Angular packages in `package.json` to Angular 5 ([example](https://github.com/jvandemo/generator-angular2-library/blob/master/generators/app/templates/_package.json))
+2. replace the `ngc` script in your `gulpfile.js` with:
+
+```
+gulp.task('ngc', function () {
+  ngc([ '--project', `${tmpFolder}/tsconfig.es5.json` ]);
+  return Promise.resolve()
+});
+```
+
+See [#230](https://github.com/jvandemo/generator-angular2-library/issues/230) for more information.
+
 ## Issues
 
 Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
@@ -536,6 +555,11 @@ $ npm run test
 MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
+
+### v12.0.0
+
+- Updated packages to Angular 5
+- Updated ngc gulp script (See [#230](https://github.com/jvandemo/generator-angular2-library/issues/230)) (Credits to [Filip Lauc](https://github.com/flauc))
 
 ### v11.4.0
 
