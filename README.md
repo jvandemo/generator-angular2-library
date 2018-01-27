@@ -556,6 +556,11 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v12.1.0
+
+- Fixed issue with deleting .tmp folder after failed build (See [#261](https://github.com/jvandemo/generator-angular2-library/pull/261)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+- Updated package_jest.json (See [#267](https://github.com/jvandemo/generator-angular2-library/pull/267)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+
 ### v12.0.0
 
 - Updated packages to Angular 5
