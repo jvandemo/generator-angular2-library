@@ -556,6 +556,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v12.2.0
+
+- Added default extension to playground system.js config to fix [#146](https://github.com/jvandemo/generator-angular2-library/pull/146)
+
 ### v12.1.0
 
 - Fixed issue with deleting .tmp folder after failed build (See [#261](https://github.com/jvandemo/generator-angular2-library/pull/261)) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
