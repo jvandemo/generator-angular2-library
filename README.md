@@ -556,6 +556,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v12.2.1
+
+- Update system.js config to use single quotes
+
 ### v12.2.0
 
 - Added default extension to playground system.js config to fix [#146](https://github.com/jvandemo/generator-angular2-library/pull/146)
