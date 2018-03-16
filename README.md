@@ -556,10 +556,14 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v12.4.0
+
+- Add prompt to ask for scope [#283](https://github.com/jvandemo/generator-angular2-library/pull/283) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
+
 ### v12.3.0
 
-- Update rollup options [#270](https://github.com/jvandemo/generator-angular2-library/pull/270)
-- Fix mkdir error [#269](https://github.com/jvandemo/generator-angular2-library/pull/269)
+- Update rollup options [#270](https://github.com/jvandemo/generator-angular2-library/pull/270) (Credits to [Zura Gabievi](https://github.com/zgabievi))
+- Fix mkdir error [#269](https://github.com/jvandemo/generator-angular2-library/pull/269) (Credits to [Louis Amstutz](https://github.com/lamstutz))
 
 ### v12.2.1
 
