@@ -55,6 +55,18 @@ module.exports = class extends Generator {
       },
       {
         type: 'input',
+        name: 'scope',
+        message: 'Your library scope (eg: @angular) leave blank for none',
+        default: '',
+        validate: function (x) {
+          return !x || x.indexOf('@') === 0;
+        },
+        filter: function (x) {
+          return x ? x + '/' : '';
+        }
+      },
+      {
+        type: 'input',
         name: 'gitRepositoryUrl',
         message: 'Git repository url',
         default: 'https://github.com/username/repo',
@@ -87,7 +99,9 @@ module.exports = class extends Generator {
 
         gitRepositoryUrl: props.gitRepositoryUrl,
 
-        testFramework: props.testFramework
+        testFramework: props.testFramework,
+
+        scope: props.scope
       };
 
     });

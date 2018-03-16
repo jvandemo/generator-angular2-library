@@ -22,7 +22,7 @@
     "strictMetadataEmit": true,
     "skipTemplateCodegen": true,
     "flatModuleOutFile": "<%= props.libraryName.kebabCase %>.js",
-    "flatModuleId": "<%= props.libraryName.kebabCase %>"
+    "flatModuleId": "<%= props.scope %><%= props.libraryName.kebabCase %>"
   },
   "files": [
     "./index.ts"

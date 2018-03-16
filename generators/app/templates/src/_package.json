@@ -1,5 +1,5 @@
 {
-  "name": "<%= props.libraryName.kebabCase %>",
+  "name": "<%= props.scope%><%= props.libraryName.kebabCase %>",
   "version": "0.1.0",
   "repository": {
     "type": "git",

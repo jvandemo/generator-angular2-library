@@ -1,11 +1,11 @@
-# <%= props.libraryName.kebabCase %>
+# <%= props.scope %><%= props.libraryName.kebabCase %>
 
 ## Installation
 
 To install this library, run:
 
 ```bash
-$ npm install <%= props.libraryName.kebabCase %> --save
+$ npm install <%= props.scope%><%= props.libraryName.kebabCase %> --save
 ```
 
 ## Consuming your library
@@ -13,7 +13,7 @@ $ npm install <%= props.libraryName.kebabCase %> --save
 Once you have published your library to npm, you can import your library in any Angular application by running:
 
 ```bash
-$ npm install <%= props.libraryName.kebabCase %>
+$ npm install <%= props.scope %><%= props.libraryName.kebabCase %>
 ```
 
 and then from your Angular `AppModule`:
@@ -25,7 +25,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // Import your library
-import { SampleModule } from '<%= props.libraryName.kebabCase %>';
+import { SampleModule } from '<%= props.scope %><%= props.libraryName.kebabCase %>';
 
 @NgModule({
   declarations: [

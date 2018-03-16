@@ -6,7 +6,7 @@ import { NgModule } from '@angular/core';
 import { Component } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
-import { SampleModule }  from '<%= props.libraryName.kebabCase %>';
+import { SampleModule }  from '<%= props.scope %><%= props.libraryName.kebabCase %>';
 
 @Component({
   selector: 'app',
