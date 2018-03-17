@@ -556,6 +556,10 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
+### v12.4.1
+
+- Fix tslint rule [#286](https://github.com/jvandemo/generator-angular2-library/pull/286) (Credits to [Mathias Wittlock](https://github.com/wittlock))
+
 ### v12.4.0
 
 - Add prompt to ask for scope [#283](https://github.com/jvandemo/generator-angular2-library/pull/283) (Credits to [Fabrizio Fortunato](https://github.com/izifortune))
