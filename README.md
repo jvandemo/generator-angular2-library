@@ -1,7 +1,12 @@
-![generator-angular-2-library](https://cloud.githubusercontent.com/assets/1859381/24447242/901c8a1a-1470-11e7-8b55-2484b7825722.jpg)
+![generator-ng5-library](https://cloud.githubusercontent.com/assets/1859381/24447242/901c8a1a-1470-11e7-8b55-2484b7825722.jpg)
 [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url]
 
 [Yeoman](http://yeoman.io) generator to create a standalone [Angular](https://angular.io/) library in seconds.
+
+# IMPORTANT [TS]
+
+**There were some issues with deps versions, so I made some updates.
+Now the package works with NodeJS >= v6.14.2**
 
 If you want to create an Angular library with directives, services and/or pipes, then this generator is just what you need.
 
@@ -11,7 +16,7 @@ Watch [Jason Aden's talk](https://www.youtube.com/watch?v=unICbsPGFIA) to learn 
 
 More specifically, the latest version of this generator:
 
-- supports Angular 5
+- supports Angular 5 and 6
 - creates and configures `package.json` for the development of your library
 - creates and configures a second `package.json` for the distribution of your library
 - creates and configures `tsconfig.json` for your editor during development
@@ -30,13 +35,13 @@ This generator is built for Angular version 2 and above, hence the name generato
 
 ## Quick start
 
-![generator-angular2-library-v10](https://cloud.githubusercontent.com/assets/1859381/25838669/89e03f04-3494-11e7-8a45-1daea0ecab1e.gif)
+![generator-ng5-library-v12](https://cloud.githubusercontent.com/assets/1859381/25838669/89e03f04-3494-11e7-8a45-1daea0ecab1e.gif)
 
-First, install [Yeoman](http://yeoman.io) and generator-angular2-library using [npm](https://www.npmjs.com/) (assuming you already have [node.js](https://nodejs.org/) pre-installed).
+First, install [Yeoman](http://yeoman.io) and generator-ng5-library using [npm](https://www.npmjs.com/) (assuming you already have [node.js](https://nodejs.org/) pre-installed).
 
 ```bash
 $ npm install -g yo
-$ npm install -g generator-angular2-library
+$ npm install -g generator-ng5-library
 ```
 
 make a new directory and `cd` into it:
@@ -49,16 +54,16 @@ $ cd angular-library-name
 and generate your new library:
 
 ```bash
-$ yo angular2-library
+$ yo ng5-library
 ```
 
 The generator will prompt you for:
 
 ```bash
-? Your full name: Jurgen Van de Moere
-? Your email address: jurgen.van.de.moere@gmail.com
-? Your library name (kebab case): angular-library-name
-? Git repository url: https://github.com/jvandemo/angular2-library-name
+? Your full name: Tony Samperi
+? Your email address: github@tonysamperi.it
+? Your library name (kebab case): angular-lib-name
+? Git repository url: https://github.com/your-name/angular-lib-name
 ```
 
 and create the following files for you:
@@ -540,7 +545,7 @@ See [#230](https://github.com/jvandemo/generator-angular2-library/issues/230) fo
 
 ## Issues
 
-Please report bugs and issues [here](https://github.com/jvandemo/generator-angular2-library/issues).
+Please report bugs and issues [here](https://github.com/tonysamperi/generator-ng5-library/issues).
 
 ## Development
 
@@ -552,9 +557,13 @@ $ npm run test
 
 ## License
 
-MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
+MIT © [Tony Samperi](http://tonysamperi.github.io)
 
 ## Change log
+
+### v12.4.2
+
+- Added support for double quotes in 'templateUrl'
 
 ### v12.4.1
 
