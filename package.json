@@ -1,43 +1,41 @@
 {
-  "name": "generator-ng5-library",
-  "version": "12.4.4",
-  "description": "Generator to create an Angular 5+ library",
-  "homepage": "https://github.com/tonysamperi/generator-ng5-library",
+  "name": "generator-angular2-library",
+  "version": "12.5.0",
+  "description": "Generator to create an Angular 2 library",
+  "homepage": "https://github.com/jvandemo/generator-angular2-library",
   "author": {
-    "name": "Tony Samperi",
-    "email": "github@tonysamperi.it",
-    "url": "https://tonysamperi.github.io"
+    "name": "Jurgen Van de Moere",
+    "email": "jurgen.van.de.moere@gmail.com",
+    "url": "http://www.jvandemo.com"
   },
   "files": [
     "generators"
   ],
   "main": "generators/index.js",
   "keywords": [
-    "yeoman-generator",
-    "angular",
-    "library"
+    "yeoman-generator"
   ],
   "license": "MIT",
   "dependencies": {
     "chalk": "^1.1.3",
     "underscore.string": "^3.3.4",
-    "yosay": "^2.0.0",
-	"yeoman-generator": "^2.0.5"
+    "yeoman-generator": "^2.0.5",
+    "yosay": "^2.0.0"
   },
   "devDependencies": {
+    "yeoman-assert": "^3.1.1",
     "gulp": "^3.9.1",
-    "gulp-coveralls": "^0.1.4",
     "gulp-eslint": "^2.0.0",
     "gulp-exclude-gitignore": "^1.0.0",
     "gulp-istanbul": "^0.10.4",
     "gulp-mocha": "^2.2.0",
-    "gulp-nsp": "^3.0.1",
     "gulp-plumber": "^1.1.0",
-    "yeoman-assert": "^3.1.1"
+    "gulp-nsp": "^3.0.1",
+    "gulp-coveralls": "^0.1.4"
   },
-  "repository": "tonysamperi/generator-ng5-library",
+  "repository": "jvandemo/generator-angular2-library",
   "scripts": {
-    "prepublishOnly": "gulp prepublish",
+    "prepublish": "gulp prepublish",
     "test": "gulp"
   }
 }
