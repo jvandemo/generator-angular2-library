@@ -556,10 +556,6 @@ MIT © [Jurgen Van de Moere](http://www.jvandemo.com)
 
 ## Change log
 
-### v12.4.0
-
-- Fix tslint rule [#286](https://github.com/jvandemo/generator-angular2-library/pull/286) (Credits to [Mathias Wittlock](https://github.com/wittlock))
-
 ### v12.4.1
 
 - Fix tslint rule [#286](https://github.com/jvandemo/generator-angular2-library/pull/286) (Credits to [Mathias Wittlock](https://github.com/wittlock))
